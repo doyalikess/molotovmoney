@@ -339,19 +339,16 @@
     <script>
         (function(){
             // Using your provided Discord app credentials:
-            const clientId = '1340733164363976745';
-            // IMPORTANT: Set your actual redirect URI here, e.g., "https://yourbackend.example.com/callback"
-            const redirectUri = 'https://doyalikess.github.io/molotovmoney/';
-            const scope = 'identify email';
-            const responseType = 'code';
-            const baseUrl = 'https://discord.com/oauth2/authorize?';
+<!-- Discord login button for desktop -->
+<button id="discord-login-btn" class="user__btn" onclick="location.href='https://discord.com/oauth2/authorize?client_id=1340733164363976745&response_type=code&redirect_uri=https%3A%2F%2Fdoyalikess.github.io%2Fmolotovmoney%2F&scope=identify+email'">
+    <span class="user__btn-span">Sign in with Discord</span>
+</button>
 
-            function buildDiscordOAuthUrl() {
-                return baseUrl +
-                    '?client_id=' + clientId +
-                    '&redirect_uri=' + encodeURIComponent(redirectUri) +
-                    '&response_type=' + responseType +
-                    '&scope=' + encodeURIComponent(scope);
+<!-- Discord login button for mobile -->
+<button id="discord-login-btn-mobile" class="user-mobile__btn" onclick="location.href='https://discord.com/oauth2/authorize?client_id=1340733164363976745&response_type=code&redirect_uri=https%3A%2F%2Fdoyalikess.github.io%2Fmolotovmoney%2F&scope=identify+email'">
+    Sign in with Discord
+</button>
+
             }
 
             // Desktop login button
