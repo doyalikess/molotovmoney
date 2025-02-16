@@ -15,6 +15,29 @@
     <button onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=1340733164363976745&response_type=code&redirect_uri=https%3A%2F%2Fdoyalikess.github.io%2Fmolotovmoney%2Fmodes%2Fbattles.html&scope=identify'">
         Sign in with Discord
     </button>
+
+    <!-- Display user information here -->
+    <div id="user-info">
+        <h2>User Info</h2>
+        <p><strong>Discord Username:</strong> <span id="discord-username">Not logged in</span></p>
+        <p><strong>Discord ID:</strong> <span id="discord-id">Not logged in</span></p>
+    </div>
+
+    <script>
+        // Function to extract code from the URL and display it
+        function displayCodeAsUsername() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code'); // Get the 'code' parameter from the URL
+
+            if (code) {
+                document.getElementById('discord-username').innerText = code;
+                document.getElementById('discord-id').innerText = 'ID not available'; // Placeholder for ID
+            }
+        }
+
+        // Call the function on page load
+        displayCodeAsUsername();
+    </script>
 </body>
 
 </html>
