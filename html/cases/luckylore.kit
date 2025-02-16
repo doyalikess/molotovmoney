@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ludzik">
+    <meta name="description" content="CSGO Gambling website.">
+    <meta name="keywords" content="CSGO, Cases, Upgrader, Roulette, Crash.">
+    <title>ezSkins - LuckyLore Case</title>
+    <link rel="shortcut icon" href="../dist/img/favicon.jpg" type="image/x-icon">
+    <!-- @import "../link.kit" -->
+</head>
+
+<body>
+    <!-- @import "../nav-cases.kit" -->
+    <main class="main">
+        <!-- @import "../lastdrops.kit" -->
+        <div class="wrapper">
+            <div class="case__buttons">
+                <div class="case__button-container case__button-container--left">
+                    <button class="case__btn case__btn--back"><i
+                            class="fa-solid fa-arrow-left case__icon--arrow"></i>Back</button>
+                </div>
+                <div class="case__buttons-amount">
+                    <button class="case__button-amount normal-btn" id="1Case">1</button>
+                    <button class="case__button-amount normal-btn" id="2Case">2</button>
+                    <button class="case__button-amount normal-btn" id="3Case">3</button>
+                    <button class="case__button-amount normal-btn" id="4Case">4</button>
+                    <button class="case__button-amount normal-btn" id="5Case">5</button>
+                </div>
+                <div class="case__button-container">
+                    <button class="case__btn case__btn--mute not-muted"><i
+                            class="fa-solid fa-volume-high case__icon"></i><i
+                            class="fa-solid fa-volume-xmark case__icon" style="display: none;"></i></button>
+                </div>
+            </div>
+            <div class="case__allcases">
+                <div class="case__container">
+                    <div class="case__middle-point"></div>
+                    <div class="case__middle-triangle"></div>
+                    <div class="case__middle-triangle case__middle-triangle--bottom"></div>
+                    <div class="case__items">
+                    </div>
+
+                </div>
+            </div>
+            <button class="spin normal-btn">SPIN</button>
+            <div class="case__drop-box">
+            </div>
+        </div>
+        <div class="win-popup  hidden">
+            <div class="win-popup-bg">
+                <div class="win-popup__container">
+                    <p class="win-popup__title">Your drop</p>
+                    <img src="" alt="" class="win-popup__img">
+                    <p class="win-popup__item-name"></p>
+                    <p class="win-popup__item-price"></p>
+                    <div class="win-popup__buttons">
+                        <button class="win-popup__btn win-popup__btn--sell normal-btn">Sell</button>
+                        <button class="win-popup__btn win-popup__btn--take normal-btn">Take</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- @import "../footer.kit" -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../dist/js/balance.min.js"></script>
+    <script src="../dist/js/cases/luckylore.min.js"></script>
+    <script src="../dist/js/last-drops.min.js"></script>
+    <script src="../dist/js/account.min.js"></script>
+    <script src="../dist/js/script.min.js"></script>
+</body>
+
+</html>

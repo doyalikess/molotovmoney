@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ludzik">
+    <meta name="description" content="CSGO Gambling website.">
+    <meta name="keywords" content="CSGO, Cases, Upgrader, Roulette, Crash.">
+    <title>ezSkins - LuckyLore Case</title>
+    <link rel="shortcut icon" href="../dist/img/favicon.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+<link href="../dist/css/hamburgers.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../dist/css/style.min.css">
+<script src="https://kit.fontawesome.com/bdb2f8ae99.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="nav">
+    <div class="wrapper">
+        <div class="nav__container">
+            <div class="nav__left">
+                <a href="../index.html" class="nav__link nav__link--logo">ezSkins</a>
+                <ul class="nav__list">
+                    <li id="cases" class="nav__item wider-left">
+                        <div class="nav__link-bg hidden"></div>
+                        <a href="../index.html" class="nav__link"><i class="fa-solid fa-toolbox nav__icon"></i>Cases</a>
+                    </li>
+                    <li id="battles" class="nav__item">
+                        <div class="nav__link-bg hidden"></div>
+                        <a href="../modes/battles.html" class="nav__link"><i
+                                class="fa-solid fa-bolt nav__icon"></i>Battles</a>
+                    </li>
+                    <li id="upgrader" class="nav__item">
+                        <div class="nav__link-bg hidden"></div>
+                        <a href="../modes/upgrader.html" class="nav__link"><i
+                                class="fa-solid fa-circle-up nav__icon"></i>Upgrader</a>
+                    </li>
+                    <li id="roulette" class="nav__item">
+                        <div class="nav__link-bg hidden"></div>
+                        <a href="../modes/roulette.html" class="nav__link"><i
+                                class="ti ti-rotate-dot nav__icon nav__icon--bigger"></i>Roulette</a>
+                    </li>
+                    <li class="nav__item nav__item--menu">
+                        <div class="nav__link-bg hidden"></div>
+                        <button class="nav__link nav__link--btn">Other<i
+                                class="fa-solid fa-arrow-down nav__icon"></i></button>
+                        <div class="nav__menu hidden">
+                            <div class="nav__menu-item">
+                                <a href="../modes/crash.html" class="nav__link"><i
+                                        class="fa-solid fa-burst nav__menu-icon"></i>Crash</a>
+                            </div>
+                            <div class="nav__menu-item">
+                                <a href="../modes/jackpot.html" class="nav__link"><i
+                                        class="fa-solid fa-clover nav__menu-icon"></i>Jackpot</a>
+                            </div>
+                            <div class="nav__menu-item">
+                                <a href="../modes/coinflip.html" class="nav__link"><i
+                                        class="fa-solid fa-coins nav__menu-icon"></i>Coinflip</a>
+                            </div>
+                            <div class="nav__menu-item">
+                                <a href="../modes/saper.html" class="nav__link"><i
+                                        class="fa-solid fa-bomb nav__menu-icon"></i>Mines</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button class="hamburger nav__hamb hamburger--spring" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="user">
+                <div class="user__logged-out hidden">
+                    <button id="login-btn" class="user__btn"><span class="user__btn-span">sign in</span></button>
+                </div>
+                <div class="user__logged-in">
+                    <a href="../diff/profile.html" class="user__profile"><img src="" alt="Your Profile Avatar"
+                            class="user__avatar"></a>
+                    <div class="user__middle">
+                        <a href="../diff/profile.html" class="user__name"></a>
+                        <p class="user__balance">Balance: <span class="user__balance user__balance--amount"></span>
+                        </p>
+                    </div>
+                    <button id="logout-btn" class="user__btn user__btn--logout user__btn--nobg"><i
+                            class="fa-solid fa-arrow-right-to-bracket user__icon"></i></button>
+                    <button class="user__btn user__btn--deposit"><a href="../diff/deposit.html"
+                            class="user__link user__link--deposit"><i
+                                class="fa-solid fa-plus user-mobile__icon user-mobile__icon--deposit"></i></a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="nav nav-mobile hidden">
+    <div class="user-mobile">
+        <div class="user-mobile__logged-out-mobile hidden">
+            <button id="login-btn-mobile" class="user-mobile__btn">Sign in</button>
+        </div>
+        <div class="user-mobile__logged-in-mobile">
+            <div class="user-mobile__top">
+                <img src="" alt="Your Profile Avatar" class="user-mobile__avatar">
+                <div class="user-mobile__middle">
+                    <p class="user-mobile__name"></p>
+                    <p class="user-mobile__balance">Balance: <span
+                            class="user-mobile__balance user-mobile__balance--amount"></span></p>
+                </div>
+            </div>
+            <div class="user-mobile__bottom">
+                <button id="logout-btn-mobile" class="user-mobile__btn user-mobile__btn--logout"><i
+                        class="fa-solid fa-arrow-right-to-bracket user-mobile__icon"></i></button>
+                <button class="user-mobile__btn user-mobile__btn--deposit"><a href="../diff/deposit.html"
+                        class="user__link user__link--deposit"><i
+                            class="fa-solid fa-plus user-mobile__icon user-mobile__icon--deposit"></i></a></button>
+            </div>
+        </div>
+    </div>
+    <ul class="nav-mobile__list">
+        <li class="nav-mobile__item"></li>
+        </li>
+        <li class="nav-mobile__item">
+            <a href="../index.html" class="nav-mobile__link"><i
+                    class="fa-solid fa-toolbox nav-mobile__icon"></i>Cases</a>
+        </li>
+        <li class="nav-mobile__item">
+            <a href="../modes/battles.html" class="nav-mobile__link"><i
+                    class="fa-solid fa-bolt nav-mobile__icon"></i>Battles</a>
+        </li>
+        <li class="nav-mobile__item">
+            <a href="../modes/upgrader.html" class="nav-mobile__link"><i
+                    class="fa-solid fa-circle-up nav-mobile__icon"></i>Upgrader</a>
+        </li>
+        <li class="nav-mobile__item">
+            <a href="../modes/roulette.html" class="nav-mobile__link"><i
+                    class="ti ti-rotate-dot nav-mobile__icon nav-mobile__icon--bigger"></i>Roulette</a>
+        </li>
+        <li class="nav-mobile__item">
+            <a href="../modes/crash.html" class="nav-mobile__link"><i
+                    class="fa-solid fa-burst nav-mobile__icon"></i>Crash</a>
+        </li>
+        <li class="nav-mobile__item">
+            <a href="../modes/jackpot.html" class="nav-mobile__link"><i
+                    class="fa-solid fa-clover nav-mobile__icon"></i>Jackpot</a>
+        </li>
+        <li class="nav-mobile__item">
+            <a href="../modes/coinflip.html" class="nav-mobile__link"><i
+                    class="fa-solid fa-coins nav-mobile__icon"></i>Coinflip</a>
+        </li>
+        <li class="nav-mobile__item">
+            <a href="../modes/saper.html" class="nav-mobile__link"><i
+                    class="fa-solid fa-bomb nav-mobile__icon"></i>Mines</a>
+        </li>
+    </ul>
+</div>
+<div class="login-popup hidden">
+    <div class="login-popup__container">
+        <h3 class="login-pop__title">Sing in</h3>
+        <input id="login-img" class="login-popup__input" type="text" placeholder="Avatar URL">
+        <input id="login-nickname" class="login-popup__input" type="text" placeholder="Nickname">
+        <button class="login-popup__btn normal-btn">Create Account</button>
+        <i class="fa-solid fa-xmark login-popup__icon"></i>
+    </div>
+</div>
+    <main class="main">
+        <section class="drop">
+    <div class="drop__box">
+        <div class="drop__box-bg"></div>
+        <ul class="drop__list">
+        </ul>
+    </div>
+</section>
+<div class="wrapper">
+    <ul class="globalstats__list">
+        <li class="globalstats__item">
+            <p class="globalstats__text">Cases Opened: <span id="casesopened">0</span></p>
+        </li>
+        <li class="globalstats__item">
+            <p class="globalstats__text">Battles created: <span id="battlescreated">0</span></p>
+        </li>
+        <li class="globalstats__item">
+            <p class="globalstats__text">Upgrades: <span id="upgrades">0</span></p>
+        </li>
+        <li class="globalstats__item">
+            <p class="globalstats__text">Jackpots won: <span id="jackpotswon">0</span></p>
+        </li>
+    </ul>
+</div>
+        <div class="wrapper">
+            <div class="case__buttons">
+                <div class="case__button-container case__button-container--left">
+                    <button class="case__btn case__btn--back"><i
+                            class="fa-solid fa-arrow-left case__icon--arrow"></i>Back</button>
+                </div>
+                <div class="case__buttons-amount">
+                    <button class="case__button-amount normal-btn" id="1Case">1</button>
+                    <button class="case__button-amount normal-btn" id="2Case">2</button>
+                    <button class="case__button-amount normal-btn" id="3Case">3</button>
+                    <button class="case__button-amount normal-btn" id="4Case">4</button>
+                    <button class="case__button-amount normal-btn" id="5Case">5</button>
+                </div>
+                <div class="case__button-container">
+                    <button class="case__btn case__btn--mute not-muted"><i
+                            class="fa-solid fa-volume-high case__icon"></i><i
+                            class="fa-solid fa-volume-xmark case__icon" style="display: none;"></i></button>
+                </div>
+            </div>
+            <div class="case__allcases">
+                <div class="case__container">
+                    <div class="case__middle-point"></div>
+                    <div class="case__middle-triangle"></div>
+                    <div class="case__middle-triangle case__middle-triangle--bottom"></div>
+                    <div class="case__items">
+                    </div>
+
+                </div>
+            </div>
+            <button class="spin normal-btn">SPIN</button>
+            <div class="case__drop-box">
+            </div>
+        </div>
+        <div class="win-popup  hidden">
+            <div class="win-popup-bg">
+                <div class="win-popup__container">
+                    <p class="win-popup__title">Your drop</p>
+                    <img src="" alt="" class="win-popup__img">
+                    <p class="win-popup__item-name"></p>
+                    <p class="win-popup__item-price"></p>
+                    <div class="win-popup__buttons">
+                        <button class="win-popup__btn win-popup__btn--sell normal-btn">Sell</button>
+                        <button class="win-popup__btn win-popup__btn--take normal-btn">Take</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+    <p class="footer__text">Created by: <span class="footer__span">Rafał Klocek</span>
+    <p>
+        <a href="https://github.com/Ludzikk" class="footer__link"><i class="fa-brands fa-github footer__icon"></i></a>
+</footer>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../dist/js/balance.min.js"></script>
+    <script src="../dist/js/cases/luckylore.min.js"></script>
+    <script src="../dist/js/last-drops.min.js"></script>
+    <script src="../dist/js/account.min.js"></script>
+    <script src="../dist/js/script.min.js"></script>
+</body>
+
+</html>

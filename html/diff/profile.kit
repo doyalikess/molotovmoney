@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ludzik">
+    <meta name="description" content="CSGO Gambling website.">
+    <meta name="keywords" content="CSGO, Cases, Upgrader, Roulette, Crash.">
+    <title>ezSkins - Profile</title>
+    <link rel="shortcut icon" href="../dist/img/favicon.jpg" type="image/x-icon">
+    <!-- @import "../link.kit" -->
+</head>
+
+<body>
+    <!-- @import "../nav-cases.kit" -->
+    <main class="main">
+        <!-- @import "../lastdrops.kit" -->
+        <section class="profile">
+            <div class="wrapper">
+                <div class="main__container">
+                    <h2 class="section__title section__title--cases"><span class="section__title-bg">Your profile</span>
+                    </h2>
+                    <div class="profile__profile-box">
+                        <div class="profile__user-info">
+                            <img src="" alt="Profile Avatar" class="profile__avatar">
+                            <div class="profile__text-box">
+                                <p class="profile__name"></p>
+                                <p class="profile__balance"></p>
+                            </div>
+                            <div class="profile__stats">
+                                <p class="profile__stats-item">
+                                    Cases opened
+                                    <span class="profile__stats-amount profile__stats-amount--cases">0</span>
+                                </p>
+                                <p class="profile__stats-item">
+                                    Battles won
+                                    <span class="profile__stats-amount profile__stats-amount--battles">0</span>
+                                </p>
+                                <p class="profile__stats-item">
+                                    Upgraded
+                                    <span class="profile__stats-amount profile__stats-amount--upgrader">0</span>
+                                </p>
+                                <p class="profile__stats-item">
+                                    Roulette won
+                                    <span class="profile__stats-amount profile__stats-amount--roulette">0</span>
+                                </p>
+                                <p class="profile__stats-item">
+                                    Crash won
+                                    <span class="profile__stats-amount profile__stats-amount--crash">0</span>
+                                </p>
+                                <p class="profile__stats-item">
+                                    Jackpot won
+                                    <span class="profile__stats-amount profile__stats-amount--jackpot">0</span>
+                                </p>
+                                <p class="profile__stats-item">
+                                    Coinflip won
+                                    <span class="profile__stats-amount profile__stats-amount--coinflip">0</span>
+                                </p>
+                                <p class="profile__stats-item">
+                                    Mines won
+                                    <span class="profile__stats-amount profile__stats-amount--saper">0</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="profile__change">
+                            <div class="profile__inputs-box">
+                                <div class="profile__input-box">
+                                    <input type="text" class="profile__input profile__input--avatar"
+                                        placeholder="Avatar URL">
+                                    <button class="profile__btn profile__btn--avatar ">change</button>
+                                </div>
+                                <div class="profile__input-box">
+                                    <input type="text" class="profile__input profile__input--nickname"
+                                        placeholder="Nickname">
+                                    <button class="profile__btn profile__btn--nickname ">change</button>
+                                </div>
+                            </div>
+                            <button class="profile__btn  profile__btn--red profile__btn--delete">delete account</button>
+                        </div>
+                    </div>
+                    <div class="profile__items">
+                        <p class="noitems-text hidden">No items</p>
+                        <div class="profile__items-buttons">
+                            <p class="profile__items-title">Your items</p>
+                            <div class="profile__items-right">
+                                <p class="profile__items-price">Total value of skins: <span
+                                        class="profile__items-value">00.00$</span></p>
+                                <button
+                                    class="profile__btn profile__btn--nomargin profile__btn--red profile__btn--sellall">sell
+                                    all</button>
+                            </div>
+                        </div>
+                        <div class="profile__items-box">
+
+                        </div>
+                        <p class="profile__pages">
+                            <span id="page-current">0</span>/<span id="page-total">0</span>
+                        </p>
+                        <button class="upgrader__list-btn upgrader__list-btn--left " onclick="changePage(-1)"><i
+                                class="fa-solid fa-arrow-left upgrader__list-btn-icon"></i></button>
+                        <button class="upgrader__list-btn upgrader__list-btn--right " onclick="changePage(1)"
+                            style="display: none;"><i
+                                class="fa-solid fa-arrow-right upgrader__list-btn-icon"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- @import "../footer.kit" -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../dist/js/firebase.min.js"></script>
+    <script src="../dist/js/account.min.js"></script>
+    <script src="../dist/js/balance.min.js"></script>
+    <script src="../dist/js/profile.min.js"></script>
+    <script src="../dist/js/last-drops.min.js"></script>
+    <script src="../dist/js/script.min.js"></script>
+</body>
+
+</html>

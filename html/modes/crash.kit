@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ludzik">
+    <meta name="description" content="CSGO Gambling website.">
+    <meta name="keywords" content="CSGO, Cases, Upgrader, Roulette, Crash.">
+    <title>ezSkins - Crash</title>
+    <link rel="shortcut icon" href="../dist/img/favicon.jpg" type="image/x-icon">
+    <!-- @import "../link.kit" -->
+</head>
+
+<body>
+    <!-- @import "../nav-cases.kit" -->
+    <main class="main">
+        <!-- @import "../lastdrops.kit" -->
+        <div class="wrapper">
+            <div class="main__container">
+                <h2 class="section__title section__title--cases"><span class="section__title-bg">Crash</span></h2>
+                <div class="crash__container">
+                    <div class="crash__box-bg"></div>
+                    <div class="crash__box">
+                        <p class="crash__multiplier"><span id="multi">1.00</span>x</p>
+                        <div class="crash__top">
+                        </div>
+                        <div class="crash__bottom">
+                        </div>
+                        <div class="crash__bg hidden"></div>
+                    </div>
+                    <div class="crash__iteminfo-container">
+                        <div class="crash__iteminfo">
+                            <div class="crash__item-color"></div>
+                            <p class="crash__item-name"></p>
+                        </div>
+                    </div>
+                    <button class="crash__btn normal-btn" id="start">start</button>
+                    <button class="crash__btn normal-btn hidden" id="withdraw">withdraw: <span
+                            id="amount">0.00</span>$</button>
+                </div>
+                <div class="profile__items">
+                    <p class="noitems-text hidden">No items</p>
+                    <div class="profile__items-buttons">
+                        <p class="profile__items-title">Your items</p>
+                    </div>
+                    <div class="profile__items-box">
+
+                    </div>
+                    <p class="profile__pages">
+                        <span id="page-current">0</span>/<span id="page-total">0</span>
+                    </p>
+                    <button class="upgrader__list-btn upgrader__list-btn--left " onclick="changePage(-1)"><i
+                            class="fa-solid fa-arrow-left upgrader__list-btn-icon"></i></button>
+                    <button class="upgrader__list-btn upgrader__list-btn--right " onclick="changePage(1)"
+                        style="display: none;"><i class="fa-solid fa-arrow-right upgrader__list-btn-icon"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- @import "../footer.kit" -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../dist/js/firebase.min.js"></script>
+    <script src="../dist/js/last-drops.min.js"></script>
+    <script src="../dist/js/balance.min.js"></script>
+    <script src="../dist/js/modes/crash.min.js"></script>
+    <script src="../dist/js/account.min.js"></script>
+    <script src="../dist/js/script.min.js"></script>

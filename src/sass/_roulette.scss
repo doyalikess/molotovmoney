@@ -1,0 +1,259 @@
+@use "./colors" as *;
+
+.roulette {
+	&__container {
+		position: relative;
+		margin: 1em 1em 0;
+		height: 100px;
+		border-radius: 20px;
+		border: 2px solid $secondary-color;
+		box-shadow: $purple-boxshadow;
+		overflow: hidden;
+	}
+
+	&__items {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		color: $text-color;
+		z-index: 100;
+		transition: left 5s cubic-bezier(0, 0, 0, 0.99);
+	}
+
+	&__item {
+		padding: 0.5em;
+		width: 100px;
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2rem;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+			rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+			rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+		transition: font-size 0.25s;
+
+		&--green {
+			background: $green-roulette;
+		}
+
+		&--red {
+			background: $red-roulette;
+		}
+
+		&--black {
+			background: $black-roulette;
+		}
+	}
+
+	&__middle-point {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+	}
+
+	&__middle-triangle {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		width: 30px;
+		height: 30px;
+		overflow: hidden;
+		z-index: 101;
+
+		&::after {
+			position: absolute;
+			content: "";
+			display: block;
+			top: -25%;
+			left: 50%;
+			transform: translate(-50%) rotate(45deg);
+			width: 20px;
+			height: 20px;
+			border-radius: 0 2px 2px;
+			background-color: $secondary-color;
+		}
+
+		&--bottom {
+			transform: translate(-50%) rotate(180deg);
+			bottom: 0;
+		}
+	}
+
+	&__lastdrops {
+		position: relative;
+		margin: 0.25em auto 3em;
+		width: 50%;
+		height: 50px;
+		border-radius: 5px;
+		border: 2px solid $border-color;
+		box-shadow: $normal-boxshadow;
+		background: $tiles-color;
+		overflow: hidden;
+
+		&-text {
+			margin-top: 1em;
+			font-size: 1.8rem;
+			text-align: center;
+			color: $secondary-color;
+		}
+
+		&-box {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			display: flex;
+			align-items: center;
+			transition: left 0.5s;
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 0.2em;
+			width: 35px;
+			height: 35px;
+			font-size: 1.4rem;
+			border-radius: 50%;
+			animation: showDropRoulette 0.5s ease forwards;
+			transition: transform 0.5s;
+
+			&--green {
+				background: $green-roulette;
+			}
+
+			&--red {
+				background: $red-roulette;
+			}
+
+			&--black {
+				background: $black-roulette;
+			}
+		}
+	}
+
+	&__bets {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__bet {
+		margin: 2em 0;
+		width: 90%;
+		min-height: 400px;
+		box-shadow: $normal-boxshadow;
+		border: 1px solid $border-color;
+		background: $tiles-color;
+		border-radius: 5px;
+
+		&-top {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1em 0;
+
+			&--red {
+				background: $red-roulette;
+			}
+
+			&--green {
+				background: $green-roulette;
+			}
+
+			&--black {
+				background: $black-roulette;
+			}
+
+			&-btn {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				border: none;
+				background: transparent;
+				cursor: pointer;
+				z-index: 1;
+
+				&:hover + h3 {
+					scale: (1.1);
+					transform: translateY(-2px);
+				}
+			}
+		}
+
+		&-bottom-box {
+			padding: 0 0.5em 1em;
+		}
+
+		&-item {
+			margin: 0.5em 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			border-radius: 5px;
+			border: 2px solid $border-color;
+			box-shadow: $normal-boxshadow;
+			background: $tiles-color;
+			overflow: hidden;
+		}
+
+		&-avatar {
+			width: 40px;
+			height: 40px;
+			object-fit: cover;
+		}
+
+		&-amount {
+			padding-right: 0.5em;
+			color: $secondary-color;
+		}
+
+		&-title {
+			transition: all 0.5s;
+		}
+
+		&-total {
+			padding: 0.5em 0;
+			font-size: 1.8rem;
+			text-align: center;
+
+			&-color {
+				color: $secondary-color;
+			}
+		}
+	}
+
+	&__timerbox {
+		padding: 2em 0 0;
+		width: 80%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&-time {
+			padding-bottom: 0.5em;
+			font-size: 2rem;
+			font-weight: bold;
+			letter-spacing: 2px;
+		}
+
+		&-line {
+			width: 100%;
+			height: 2px;
+
+			&-bg {
+				width: 100%;
+				height: 2px;
+				background: grey;
+			}
+		}
+	}
+}

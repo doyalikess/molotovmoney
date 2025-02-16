@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ludzik">
+    <meta name="description" content="CSGO Gambling website.">
+    <meta name="keywords" content="CSGO, Cases, Upgrader, Roulette, Crash.">
+    <title>ezSkins - Jackpot</title>
+    <link rel="shortcut icon" href="../dist/img/favicon.jpg" type="image/x-icon">
+    <!-- @import "../link.kit" -->
+</head>
+
+<body>
+    <!-- @import "../nav-cases.kit" -->
+    <main class="main">
+        <!-- @import "../lastdrops.kit" -->
+        <div class="wrapper">
+            <div class="main__container">
+                <h2 class="section__title section__title--cases"><span class="section__title-bg">Jackpot</span></h2>
+            </div>
+            <div class="jackpot__options">
+                <button class="jackpot__options-btn normal-btn" id="easy">low (0-10$)</button>
+                <button class="jackpot__options-btn normal-btn" id="medium">medium (0-250$)</button>
+                <button class="jackpot__options-btn normal-btn" id="hard">high (0-2000$)</button>
+                <button class="jackpot__options-btn normal-btn" id="unlimited">unlimited</button>
+            </div>
+            <div class="jackpot__top">
+                <div class="jackpot__top-box">
+                    <p class="jackpot__top-text jackpot__top-text--color" id="diff">Not Set</p>
+                    <p class="jackpot__top-text">Item Value</p>
+                </div>
+                <div class="jackpot__top-box">
+                    <p class="jackpot__top-text jackpot__top-text--color" id="playerPercent">0.00%</p>
+                    <p class="jackpot__top-text">Win Chance</p>
+                </div>
+                <div class="jackpot__top-box jackpot__top-box--value">
+                    <p class="jackpot__top-text jackpot__top-text--color" id="totalValue">0.00$</p>
+                    <p class="jackpot__top-text">Total Value</p>
+                </div>
+            </div>
+            <div class="jackpot__container">
+                <div class="jackpot__middle-point"></div>
+                <div class="jackpot__middle-triangle"></div>
+                <div class="jackpot__middle-triangle jackpot__middle-triangle--bottom"></div>
+                <div class="jackpot__items">
+                </div>
+            </div>
+            <div class="jackpot__timerbox">
+                <p class="jackpot__timerbox-time">30.00s</p>
+                <div class="jackpot__timerbox-line-bg">
+                    <div class="jackpot__timerbox-line"></div>
+                </div>
+            </div>
+            <div class="jackpot__players">
+                <div class="jackpot__players-player" style="order: 1; height: 100px;">
+                </div>
+                <div class="jackpot__players-player" style="order: 1; height: 100px;">
+                </div>
+                <div class="jackpot__players-player" style="order: 1; height: 100px;">
+                </div>
+                <div class="jackpot__players-player" style="order: 1; height: 100px;">
+                </div>
+            </div>
+            <div class="jackpot__playeritems">
+                <p class="noitems-text hidden">No items</p>
+                <div class="jackpot__playeritems-buttons">
+                    <p class="jackpot__playeritems-value jackpot__playeritems-value--left">Total value: <span
+                            class="jackpot__playeritems-amount">0.00$</span></p>
+                    <p class="jackpot__playeritems-value">Items: <span class="jackpot__playeritems-items-amount"><span
+                                id="itemAmount">0</span>/10</span></p>
+                    <div class="jackpot__playeritems-right">
+                        <button class="jackpot__playeritems-btn" id="join">Join</button>
+                    </div>
+                </div>
+                <div class="jackpot__playeritems-box">
+                </div>
+                <p class="profile__pages">
+                    <span id="page-current">0</span>/<span id="page-total">0</span>
+                </p>
+                <button class="upgrader__list-btn upgrader__list-btn--left " onclick="changePage(-1)"><i
+                        class="fa-solid fa-arrow-left upgrader__list-btn-icon"></i></button>
+                <button class="upgrader__list-btn upgrader__list-btn--right " onclick="changePage(1)"
+                    style="display: none;"><i class="fa-solid fa-arrow-right upgrader__list-btn-icon"></i></button>
+            </div>
+        </div>
+    </main>
+    <!-- @import "../footer.kit" -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../dist/js/last-drops.min.js"></script>
+    <script src="../dist/js/balance.min.js"></script>
+    <script src="../dist/js/modes/jackpot.min.js"></script>
+    <script src="../dist/js/account.min.js"></script>
+    <script src="../dist/js/script.min.js"></script>

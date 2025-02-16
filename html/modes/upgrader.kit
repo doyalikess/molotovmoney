@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ludzik">
+    <meta name="description" content="CSGO Gambling website.">
+    <meta name="keywords" content="CSGO, Cases, Upgrader, Roulette, Crash.">
+    <title>ezSkins - Upgrader</title>
+    <link rel="shortcut icon" href="../dist/img/favicon.jpg" type="image/x-icon">
+    <!-- @import "../link.kit" -->
+</head>
+
+<body id="upgrader">
+    <!-- @import "../nav-cases.kit" -->
+    <main class="main">
+        <!-- @import "../lastdrops.kit" -->
+        <div class="wrapper">
+            <div class="main__container">
+                <h2 class="section__title section__title--cases"><span class="section__title-bg">Upgrader</span></h2>
+            </div>
+            <div class="upgrader__container">
+                <div class="upgrader__top">
+                    <div class="upgrader__top-left">
+                        <div class="upgrader__circle"></div>
+                        <div class="upgrader__infobox upgrader__infobox-left">
+                            <p class="upgrader__item-price">0.00$</p>
+                            <button class="upgrader__remove-btn upgrader__remove-btn-left"><i
+                                    class="fa-solid fa-trash-can upgrader__top-icon"></i></button>
+                        </div>
+                        <img src="../dist/img/blank.png" alt="" class="upgrader__top-img">
+                    </div>
+                    <div class="upgrader__top-middle">
+                        <div class="upgrader__base"></div>
+                        <div class="upgrader__base-inner">
+                            <div class="upgrader__indicator"></div>
+                        </div>
+                        <div class="upgrader__percent">0.00%</div>
+                        <div class="upgrader__base-click"></div>
+                    </div>
+                    <div class="upgrader__top-right">
+                        <div class="upgrader__circle"></div>
+                        <div class="upgrader__infobox upgrader__infobox-right">
+                            <p class="upgrader__item-price">0.00$</p>
+                            <button class="upgrader__remove-btn upgrader__remove-btn-right"><i
+                                    class="fa-solid fa-trash-can upgrader__top-icon"></i></button>
+                        </div>
+                        <img src="../dist/img/blank.png" alt="" class="upgrader__top-img">
+                    </div>
+                </div>
+                <div class="upgrader__bottom">
+                    <div class="upgrader__bottom-left">
+                        <p class="noitems-text hidden">No items</p>
+                        <div class="upgrader__bottom-left-top">
+                            <p class="upgrader__bottom-title">Your items</p>
+                            <select class="upgrader__select" name="price-user" id="price-user">
+                                <option value="asc">asc</option>
+                                <option value="desc">desc</option>
+                            </select>
+                        </div>
+                        <button class="upgrader__list-btn upgrader__list-btn--left upgrader__list-btn--leftuser"
+                            onclick="changePage(-1)"><i
+                                class="fa-solid fa-arrow-left upgrader__list-btn-icon"></i></button>
+                        <button class="upgrader__list-btn upgrader__list-btn--right upgrader__list-btn--rightuser"
+                            onclick="changePage(1)" style="display: none;"><i
+                                class="fa-solid fa-arrow-right upgrader__list-btn-icon"></i></button>
+                        <div class="upgrader__list upgrader__list-playeritems">
+                        </div>
+                        <p class="profile__pages">
+                            <span id="page-current-left">0</span>/<span id="page-total-left">0</span>
+                        </p>
+                    </div>
+                    <div class="upgrader__bottom-right">
+                        <div class="upgrader__bottom-right-top">
+                            <p class="upgrader__bottom-title">Upgrade items</p>
+                            <!-- <div class="upgrader__bottom-right-mid">
+                                    <input type="number" class="upgrader__input" placeholder="0$">
+                                    <p class="upgrader__text">to</p>
+                                    <input type="number" class="upgrader__input" placeholder="99999$">
+                                </div> -->
+                            <select class="upgrader__select" name="price-all" id="price-all">
+                                <option class="upgrader__value" value="asc">asc</option>
+                                <option class="upgrader__value" value="desc">desc</option>
+                            </select>
+                        </div>
+                        <button class="upgrader__list-btn upgrader__list-btn--left upgrader__list-btn--leftall"
+                            onclick="changePage(-2)"><i
+                                class="fa-solid fa-arrow-left upgrader__list-btn-icon"></i></button>
+                        <button class="upgrader__list-btn upgrader__list-btn--right upgrader__list-btn--rightall"
+                            onclick="changePage(2)"><i
+                                class="fa-solid fa-arrow-right upgrader__list-btn-icon"></i></button>
+                        <div class="upgrader__list upgrader__list-allitems">
+                        </div>
+                        <p class="profile__pages">
+                            <span id="page-current-right">0</span>/<span id="page-total-right">0</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- @import "../footer.kit" -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../dist/js/last-drops.min.js"></script>
+    <script src="../dist/js/modes/upgrader.min.js"></script>
+    <script src="../dist/js/balance.min.js"></script>
+    <script src="../dist/js/account.min.js"></script>
+    <script src="../dist/js/script.min.js"></script>
+</body>
+
+</html>

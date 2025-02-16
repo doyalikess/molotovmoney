@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ludzik">
+    <meta name="description" content="CSGO Gambling website.">
+    <meta name="keywords" content="CSGO, Cases, Upgrader, Roulette, Crash.">
+    <title>ezSkins - Deposit</title>
+    <link rel="shortcut icon" href="../dist/img/favicon.jpg" type="image/x-icon">
+    <!-- @import "../link.kit" -->
+</head>
+
+<body>
+    <!-- @import "../nav-cases.kit" -->
+    <main class="main second-color-main">
+        <!-- @import "../lastdrops.kit" -->
+        <section class="deposit">
+            <div class="wrapper">
+                <div class="main__container">
+                    <h2 class="section__title section__title--cases"><span
+                            class="section__title-bg section__title-bg--2">Deposit</span></h2>
+                    <div class="deposit__container">
+                        <div class="deposit__top">
+                            <div class="deposit__top-left">
+                                <label for="" class="deposit__label">How much you want to deposit
+                                </label>
+                                <div class="deposit__label-container">
+                                    <input id="deposit-amount" type="text" oninput="formatCurrency(this)" class="deposit__input"
+                                        placeholder="00.00$">
+                                    <button class="deposit__clear-btn"><i
+                                            class="fa-solid fa-xmark deposit__icon"></i></button>
+                                </div>
+                            </div>
+                            <div class="deposit__top-right">
+                                <label for="" class="deposit__label">Your e-mail address</label>
+                                <div class="deposit__label-container">
+                                    <input id="email-input" type="text" class="deposit__input"
+                                        placeholder="Your e-mail address">
+                                    <button class="deposit__clear-btn"><i
+                                            class="fa-solid fa-xmark deposit__icon"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="deposit__bottom">
+                            <button id="5.00$" class="deposit__btn">5.00$</button>
+                            <button id="10.00$" class="deposit__btn">10.00$</button>
+                            <button id="25.00$" class="deposit__btn">25.00$</button>
+                            <button id="50.00$" class="deposit__btn">50.00$</button>
+                            <button id="75.00$" class="deposit__btn">75.00$</button>
+                            <button id="100.00$" class="deposit__btn">100.00$</button>
+                        </div>
+                        <button class="deposit__submit-btn normal-btn">Deposit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- @import "../footer.kit" -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../dist/js/firebase.min.js"></script>
+    <script src="../dist/js/last-drops.min.js"></script>
+    <script src="../dist/js/balance.min.js"></script>
+    <script src="../dist/js/deposit.min.js"></script>
+    <script src="../dist/js/account.min.js"></script>
+    <script src="../dist/js/script.min.js"></script>
+</body>
+
+</html>

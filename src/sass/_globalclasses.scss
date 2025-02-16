@@ -1,0 +1,880 @@
+@use "./colors" as *;
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1300px;
+	width: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+.body-scroll {
+	overflow-y: hidden;
+}
+
+.active-site {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		content: "";
+		width: 100%;
+		height: 2px;
+		background-color: $secondary-color;
+	}
+
+	.nav__link {
+		color: $secondary-color;
+	}
+
+	.nav__icon {
+		color: $secondary-color;
+		transition: color 0.5s;
+	}
+
+	&:hover a.nav__link,
+	&:hover i.nav__icon {
+		color: $secondary-color-text-hover;
+	}
+}
+
+.hide-nav {
+	animation: swipe-to-left 0.6s;
+}
+
+.purple {
+	color: $purple;
+	box-shadow: 0px 0px 6px $purple-low;
+	background-color: $purple-low;
+	border-radius: 10px;
+}
+
+.blue {
+	color: $blue;
+	box-shadow: 0px 0px 6px $blue-low;
+	background-color: $blue-low;
+	border-radius: 10px;
+}
+
+.green {
+	color: $green;
+	box-shadow: 0px 0px 6px $green-low;
+	background-color: $green-low;
+	border-radius: 10px;
+}
+
+.yellow {
+	color: $yellow;
+	box-shadow: 0px 0px 6px $yellow-low;
+	background-color: $yellow-low;
+	border-radius: 10px;
+}
+
+.red {
+	color: $red;
+	box-shadow: 0px 0px 6px $red-low;
+	background-color: $red-low;
+	border-radius: 10px;
+}
+
+.pink-text {
+	color: rgba(255, 0, 251, 1);
+}
+
+.purple-text {
+	color: rgba(136, 71, 255, 1);
+}
+
+.red-text {
+	color: rgba(235, 75, 75, 1);
+}
+
+.gold-text {
+	color: rgba(233, 239, 54, 1);
+}
+
+.blue-text {
+	color: rgba(75, 105, 255, 1);
+}
+
+.light-blue-text {
+	color: rgba(94, 152, 217, 1);
+}
+
+.white-text {
+	color: rgba(176, 195, 217, 1);
+}
+
+.pink-drop {
+	background: $pink-drop-cases-gradient;
+	border-bottom: 4px solid $pink-drop;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.pink-drop3 {
+	background: $pink-last-drop-gradient;
+	border-bottom: 4px solid $pink-drop;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.pink-drop2 {
+	background: $pink-drop-cases-drop-gradient;
+	border-bottom: 3px solid $pink-drop;
+	border-top: 3px solid $pink-drop;
+
+	img {
+		// filter: drop-shadow(0px 0px 10px rgba(255, 0, 251, 0.1));
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.red-drop {
+	background: $red-drop-cases-gradient;
+	border-bottom: 4px solid $red-drop;
+
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.red-drop3 {
+	background: $red-last-drop-gradient;
+	border-bottom: 4px solid $red-drop;
+
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.red-drop2 {
+	background: $red-drop-cases-drop-gradient;
+	border-bottom: 3px solid $red-drop;
+	border-top: 3px solid $red-drop;
+
+	img {
+		// filter: drop-shadow(0px 0px 10px rgba(235, 75, 75, 0.1));
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.gold-drop {
+	background: $gold-drop-cases-gradient;
+	border-bottom: 4px solid $gold-drop;
+
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.gold-drop3 {
+	background: $gold-last-drop-gradient;
+	border-bottom: 4px solid $gold-drop;
+
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.gold-drop2 {
+	background: $gold-drop-cases-drop-gradient;
+	border-bottom: 3px solid $gold-drop;
+	border-top: 3px solid $gold-drop;
+
+	img {
+		// filter: drop-shadow(0px 0px 10px rgba(233, 239, 54, 0.1));
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.purple-drop {
+	background: $purple-drop-cases-gradient;
+	border-bottom: 4px solid $purple-drop;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.purple-drop3 {
+	background: $purple-last-drop-gradient;
+	border-bottom: 4px solid $purple-drop;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.purple-drop2 {
+	background: $purple-drop-cases-drop-gradient;
+	border-bottom: 3px solid $purple-drop;
+	border-top: 3px solid $purple-drop;
+
+	img {
+		// filter: drop-shadow(0px 0px 10px rgba(136, 71, 255, 0.1));
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.blue-drop {
+	background: $blue-drop-cases-gradient;
+	border-bottom: 4px solid $blue-drop;
+
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.blue-drop3 {
+	background: $blue-last-drop-gradient;
+	border-bottom: 4px solid $blue-drop;
+
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.blue-drop2 {
+	background: $blue-drop-cases-drop-gradient;
+	border-bottom: 3px solid $blue-drop;
+	border-top: 3px solid $blue-drop;
+
+	img {
+		// filter: drop-shadow(0px 0px 10px rgba(75, 105, 255, 0.1));
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.light-blue-drop {
+	background: $light-blue-drop-cases-gradient;
+	border-bottom: 4px solid $light-blue-drop;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.light-blue-drop3 {
+	background: $light-blue-last-drop-gradient;
+	border-bottom: 4px solid $light-blue-drop;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.light-blue-drop2 {
+	background: $light-blue-drop-cases-drop-gradient;
+	border-bottom: 3px solid $light-blue-drop;
+	border-top: 3px solid $light-blue-drop;
+
+	img {
+		// filter: drop-shadow(0px 0px 10px rgba(94, 152, 217, 0.1));
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.white-drop {
+	background: $white-drop-cases-gradient;
+	border-bottom: 4px solid $white-drop;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.white-drop3 {
+	background: $white-last-drop-gradient;
+	border-bottom: 4px solid $white-drop;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.white-drop2 {
+	background: $white-drop-cases-drop-gradient;
+	border-bottom: 3px solid $white-drop;
+	border-top: 3px solid $white-drop;
+
+	img {
+		// filter: drop-shadow(0px 0px 10px rgba(176, 195, 217, 0.1));
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.purple-win {
+	background: $purple-drop-win-gradient;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.pink-win {
+	background: $pink-drop-win-gradient;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.gold-win {
+	background: $gold-drop-win-gradient;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+.red-win {
+	background: $red-drop-win-gradient;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+.blue-win {
+	background: $blue-drop-win-gradient;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+.light-blue-win {
+	background: $light-blue-drop-win-gradient;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+.white-win {
+	background: $white-drop-win-gradient;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.purple-upgrader {
+	position: relative;
+	background: $purple-upgrader-gradient;
+	overflow: hidden;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 5px;
+		height: 50%;
+		transform: translate(0, -50%);
+		box-shadow: 0px 0px 30px $purple-drop;
+		background: $purple-drop;
+	}
+}
+
+.pink-upgrader {
+	position: relative;
+	background: $pink-upgrader-gradient;
+	overflow: hidden;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 5px;
+		height: 50%;
+		transform: translate(0, -50%);
+		box-shadow: 0px 0px 30px $pink-drop;
+		background: $pink-drop;
+	}
+}
+
+.red-upgrader {
+	position: relative;
+	background: $red-upgrader-gradient;
+	overflow: hidden;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 5px;
+		height: 50%;
+		transform: translate(0, -50%);
+		box-shadow: 0px 0px 30px $red-drop;
+		background: $red-drop;
+	}
+}
+.gold-upgrader {
+	position: relative;
+	background: $gold-upgrader-gradient;
+	overflow: hidden;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 5px;
+		height: 50%;
+		transform: translate(0, -50%);
+		box-shadow: 0px 0px 30px $gold-drop;
+		background: $gold-drop;
+	}
+}
+.blue-upgrader {
+	position: relative;
+	background: $blue-upgrader-gradient;
+	overflow: hidden;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 5px;
+		height: 50%;
+		transform: translate(0, -50%);
+		box-shadow: 0px 0px 30px $blue-drop;
+		background: $blue-drop;
+	}
+}
+.light-blue-upgrader {
+	position: relative;
+	background: $light-blue-upgrader-gradient;
+	overflow: hidden;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 5px;
+		height: 50%;
+		transform: translate(0, -50%);
+		box-shadow: 0px 0px 30px $light-blue-drop;
+		background: $light-blue-drop;
+	}
+}
+.white-upgrader {
+	position: relative;
+	background: $white-upgrader-gradient;
+	overflow: hidden;
+
+	img {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 5px;
+		height: 50%;
+		transform: translate(0, -50%);
+		box-shadow: 0px 0px 30px $white-drop;
+		background: $white-drop;
+	}
+}
+
+.upgrader-won {
+	background: $green-upgrader;
+}
+
+.upgrader-lost {
+	background: $red-upgrader;
+}
+
+.normal-btn {
+	padding: 0.5em 1em;
+	border: 2px solid $secondary-color;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	box-shadow: $purple-boxshadow;
+	background: $secondary-color-alpha;
+	color: $text-color;
+	cursor: pointer;
+	transition: background 0.5s;
+
+	&:hover i {
+		transform: scale(1.2);
+	}
+
+	&:hover {
+		background: $secondary-color-alpha-hover;
+	}
+}
+
+.hide-login {
+	animation: hideLoginpopup 0.6s ease;
+}
+
+.active-case-popup {
+	border: 1px solid $secondary-color;
+	background: $tiles-color;
+	transform: translateY(-5px);
+
+	img {
+		scale: 0.9;
+	}
+}
+
+.dot-active {
+	background-color: $secondary-color;
+	box-shadow: $purple-boxshadow;
+}
+
+.show-nav-menu {
+	animation: showLoginpopup 0.5s ease;
+}
+
+.hide-nav-menu {
+	animation: hideLoginpopup 0.49s ease forwards;
+}
+
+.roulette-timer {
+	animation: roulette-timer 15s linear;
+}
+
+.jackpot-timer {
+	animation: roulette-timer 30s linear;
+}
+
+.jackpot-red {
+	background: $jackpot-red;
+	background-size: 50px 50px;
+}
+
+.jackpot-blue {
+	background: $jackpot-blue;
+	background-size: 50px 50px;
+}
+.jackpot-green {
+	background: $jackpot-green;
+	background-size: 50px 50px;
+}
+.jackpot-yellow {
+	background: $jackpot-yellow;
+	background-size: 50px 50px;
+}
+
+.jackpot-red-small {
+	background: $jackpot-red;
+	background-size: 15px 15px;
+}
+
+.jackpot-blue-small {
+	background: $jackpot-blue;
+	background-size: 15px 15px;
+}
+.jackpot-green-small {
+	background: $jackpot-green;
+	background-size: 15px 15px;
+}
+.jackpot-yellow-small {
+	background: $jackpot-yellow;
+	background-size: 15px 15px;
+}
+
+.red-item-jackpot {
+	position: relative;
+	border-bottom: 3px solid $red-drop;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 100%;
+		height: 3px;
+		transform: translate(-50%);
+		box-shadow: 0px 0px 20px $red-drop;
+	}
+}
+
+.gold-item-jackpot {
+	position: relative;
+	border-bottom: 3px solid $gold-drop;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 100%;
+		height: 3px;
+		transform: translate(-50%);
+		box-shadow: 0px 0px 20px $gold-drop;
+	}
+}
+
+.pink-item-jackpot {
+	position: relative;
+	border-bottom: 3px solid $pink-drop;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 100%;
+		height: 3px;
+		transform: translate(-50%);
+		box-shadow: 0px 0px 20px $pink-drop;
+	}
+}
+.purple-item-jackpot {
+	position: relative;
+	border-bottom: 3px solid $purple-drop;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 100%;
+		height: 3px;
+		transform: translate(-50%);
+		box-shadow: 0px 0px 20px $purple-drop;
+	}
+}
+.blue-item-jackpot {
+	position: relative;
+	border-bottom: 3px solid $blue-drop;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 100%;
+		height: 3px;
+		transform: translate(-50%);
+		box-shadow: 0px 0px 20px $blue-drop;
+	}
+}
+.light-blue-item-jackpot {
+	position: relative;
+	border-bottom: 3px solid $light-blue-drop;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 100%;
+		height: 3px;
+		transform: translate(-50%);
+		box-shadow: 0px 0px 20px $light-blue-drop;
+	}
+}
+.white-item-jackpot {
+	position: relative;
+	border-bottom: 3px solid $white-drop;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 100%;
+		height: 3px;
+		transform: translate(-50%);
+		box-shadow: 0px 0px 20px $white-drop;
+	}
+}
+
+.active-item-jackpot {
+	border: 2px solid $secondary-color;
+	transform: translateY(-5px);
+
+	img {
+		scale: 0.9;
+	}
+}
+
+.not-profit {
+	border: 2px solid rgb(223, 68, 68);
+	background-color: rgba(223, 68, 68, 0.4);
+	box-shadow: rgba(223, 68, 68, 0.16) 0px 3px 6px,
+		rgba(223, 68, 68, 0.23) 0px 3px 6px;
+}
+
+.profit {
+	border: 2px solid rgb(50, 206, 50);
+	background-color: rgba(50, 206, 50, 0.4);
+	box-shadow: rgba(50, 206, 50, 0.16) 0px 3px 6px,
+		rgba(50, 206, 50, 0.23) 0px 3px 6px;
+}
+
+.pb0 {
+	padding-bottom: 0em;
+}
+
+.noitems-text {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 3rem;
+	color: $secondary-color;
+}
+
+.error-input {
+	border: 2px solid red;
+
+	&:focus {
+		outline: 1px solid red;
+	}
+}
+
+.second-color {
+	color: $secondary-color;
+}
+
+.purple-crash {
+	background: rgb(136, 71, 255);
+}
+
+.pink-crash {
+	background: rgb(211, 44, 230);
+}
+
+.red-crash {
+	background: rgb(235, 75, 75);
+}
+
+.gold-crash {
+	background: rgb(233, 239, 54);
+}
+
+.blue-crash {
+	background: rgb(75, 105, 255);
+}
+
+.white-crash {
+	background: rgb(176, 195, 217);
+}
+
+.light-blue-crash {
+	background: rgb(94, 152, 217);
+}
+
+.can-hover {
+	cursor: pointer;
+}
+
+.purple-crash-box {
+	background: $purple-crash-box;
+}
+
+.pink-crash-box {
+	background: $pink-crash-box;
+}
+.red-crash-box {
+	background: $red-crash-box;
+}
+.gold-crash-box {
+	background: $gold-crash-box;
+}
+.blue-crash-box {
+	background: $blue-crash-box;
+}
+.light-blue-crash-box {
+	background: $light-blue-crash-box;
+}
+.white-crash-box {
+	background: $white-crash-box;
+}

@@ -1,0 +1,48 @@
+@use "./colors" as *;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.6rem;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background: $main-color;
+}
+
+main {
+	flex: 1;
+}
+
+body,
+a,
+button {
+	// font-family: "Nunito", sans-serif;
+	font-family: "Exo 2", sans-serif;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: $main3-color;
+}
+
+body::-webkit-scrollbar {
+	width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: $secondary-color;
+}

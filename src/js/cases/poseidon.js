@@ -1,0 +1,580 @@
+const items2 = {
+	item0: {
+		weapon: "M4A4",
+		name: "M4A4 Poseidon",
+		skin: "Poseidon",
+		color: "pink",
+		imgDist: "../dist/img/weapons/rifles/m4a4/poseidon.jpg",
+		price: 1066.26,
+		id: 60,
+		dropPercent: 1,
+	},
+	item1: {
+		weapon: "M4A1-S",
+		name: "M4A1-S Icarus Fell",
+		skin: "Icarus Fell",
+		color: "purple",
+		imgDist: "../dist/img/weapons/rifles/m4a1-s/icarus-fell.jpg",
+		price: 460.01,
+		id: 61,
+		dropPercent: 2,
+	},
+	item2: {
+		weapon: "SSG-08",
+		name: "SSG-08 Death Strike",
+		skin: "Death Strike",
+		color: "pink",
+		imgDist: "../dist/img/weapons/rifles/ssg-08/death-strike.jpg",
+		price: 365.46,
+		id: 63,
+		dropPercent: 2,
+	},
+	item3: {
+		weapon: "FAMAS",
+		name: "FAMAS Waters of Nephthys",
+		skin: "Waters of Nephthys",
+		color: "pink",
+		imgDist: "../dist/img/weapons/rifles/famas/waters-of-nephthys.jpg",
+		price: 73.54,
+		id: 64,
+		dropPercent: 3,
+	},
+	item4: {
+		weapon: "SSG-08",
+		name: "SSG-08 Blood in the Water",
+		skin: "Blood in the Water",
+		color: "red",
+		imgDist: "../dist/img/weapons/rifles/ssg-08/blood-in-the-water.jpg",
+		price: 56.57,
+		id: 65,
+		dropPercent: 4,
+	},
+	item5: {
+		weapon: "AWP",
+		name: "AWP Sun in Leo",
+		skin: "Sun in Leo",
+		color: "light-blue",
+		imgDist: "../dist/img/weapons/rifles/awp/sun-in-leo.jpg",
+		price: 31.71,
+		id: 66,
+		dropPercent: 5,
+	},
+	item6: {
+		weapon: "G3SG1",
+		name: "G3SG1 Flux",
+		skin: "Flux",
+		color: "pink",
+		imgDist: "../dist/img/weapons/rifles/g3sg1/flux.jpg",
+		price: 17.79,
+		id: 67,
+		dropPercent: 20,
+	},
+	item7: {
+		weapon: "FAMAS",
+		name: "FAMAS Commemoration",
+		skin: "Commemoration",
+		color: "red",
+		imgDist: "../dist/img/weapons/rifles/famas/commemoration.jpg",
+		price: 12.05,
+		id: 68,
+		dropPercent: 25,
+	},
+	item8: {
+		weapon: "MAC-10",
+		name: "MAC-10 Light Box",
+		skin: "Light Box",
+		color: "blue",
+		imgDist: "../dist/img/weapons/smgs/mac-10/light-box.jpg",
+		price: 0.59,
+		id: 62,
+		dropPercent: 20,
+	},
+	item9: {
+		weapon: "MAC-10",
+		name: "MAC-10 Candy Apple",
+		skin: "Candy Apple",
+		color: "light-blue",
+		imgDist: "../dist/img/weapons/smgs/mac-10/candy-apple.jpg",
+		price: 0.13,
+		id: 69,
+		dropPercent: 18,
+	},
+};
+
+const spinBtn = document.querySelector(".spin");
+const caseItemsBox = document.querySelectorAll(".case__items");
+const countItemsAmount = Object.keys(items2).length;
+const winPupup = document.querySelector(".win-popup");
+const sellBtn = document.querySelector(".win-popup__btn--sell");
+const takeBtn = document.querySelector(".win-popup__btn--take");
+const winningItemImg = document.querySelector(".win-popup__img");
+const winningItemName = document.querySelector(".win-popup__item-name");
+const winningItemPrice = document.querySelector(".win-popup__item-price");
+const winningItemBox = document.querySelector(".win-popup__container");
+const balanceAmount = document.querySelector(".user__balance--amount");
+const balanceAmountMobile = document.querySelector(
+	".user-mobile__balance--amount"
+);
+const caseAmountBtns = document.querySelectorAll(".case__button-amount");
+const backBtn = document.querySelector(".case__btn--back");
+const muteBtn = document.querySelector(".case__btn--mute");
+const allCases = document.querySelector(".case__allcases");
+const casePrice = 40.0; // price of case
+let currentWinningItem; // current item that won
+let casesAmount = 1; // how many cases user will open
+let winningItems = []; // all winning items of current spin
+
+const casesOpenedText = document.querySelector("#casesopened");
+const battlesCreatedText = document.querySelector("#battlescreated");
+const upgradesText = document.querySelector("#upgrades");
+const jackpotsWonText = document.querySelector("#jackpotswon");
+
+const firebaseConfig = {
+	apiKey: "AIzaSyD3gW_LmVUQcbT2oFKyvpIb2V0q4V7kfRA",
+	authDomain: "ezskins-bcb15.firebaseapp.com",
+	projectId: "ezskins-bcb15",
+	databaseURL:
+		"https://ezskins-bcb15-default-rtdb.europe-west1.firebasedatabase.app",
+	storageBucket: "ezskins-bcb15.appspot.com",
+	messagingSenderId: "523489662504",
+	appId: "1:523489662504:web:6c32e739858d90f66e871d",
+};
+
+const app = firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+
+const casesRef = database.ref("caseopened");
+const battlesRef = database.ref("battlecreated");
+const upgraderRef = database.ref("upgrades");
+const jackpotRef = database.ref("jackpotwon");
+
+casesRef.on("value", (snapshot) => {
+	const casesData = snapshot.val();
+
+	casesOpenedText.textContent = casesData;
+});
+
+battlesRef.on("value", (snapshot) => {
+	const battlesData = snapshot.val();
+
+	battlesCreatedText.textContent = battlesData;
+});
+
+upgraderRef.on("value", (snapshot) => {
+	const upgradesData = snapshot.val();
+
+	upgradesText.textContent = upgradesData;
+});
+
+jackpotRef.on("value", (snapshot) => {
+	const jackpotData = snapshot.val();
+
+	jackpotsWonText.textContent = jackpotData;
+});
+
+function incrementCases() {
+	casesRef.once("value", (snapshot) => {
+		const currentValue = snapshot.val();
+
+		// Increment the current value
+		const newValue = currentValue + casesAmount;
+
+		// Update the new value back to the database
+		casesRef.set(newValue).catch((error) => {
+			console.error("Error updating value:", error);
+		});
+	});
+}
+
+const createInfoAboutItemsInChest = () => {
+	// function to create info about all items in case
+	const dropBox = document.querySelector(".case__drop-box"); // container for info about all items in case
+
+	for (i = 0; i < countItemsAmount; i++) {
+		// create all items
+		const dropItem = document.createElement("div"); // item elements
+		const dropItemPercent = document.createElement("p");
+		const dropItemImg = document.createElement("img");
+		const dropItemTextBox = document.createElement("div");
+		const dropItemTextBoxLeft = document.createElement("div");
+		const dropItemName = document.createElement("p");
+		const dropItemSkin = document.createElement("p");
+		const dropItemPrice = document.createElement("p");
+
+		dropItem.classList.add("case__drop"); // set their classes
+		dropItem.classList.add(items2[`item${i}`].color + "-drop2");
+		dropItem.style.order = "-" + items2[`item${i}`].price.toFixed(0);
+		dropItemPercent.classList.add("case__drop-percent");
+		dropItemImg.classList.add("case__drop-img");
+		dropItemTextBox.classList.add("case__drop-textbox");
+		dropItemTextBoxLeft.classList.add("case__drop-textbox-left");
+		dropItemName.classList.add("case__drop-item");
+		dropItemSkin.classList.add("case__drop-skin");
+		dropItemSkin.classList.add(items2[`item${i}`].color + "-text");
+		dropItemPrice.classList.add("case__drop-price");
+
+		dropItemImg.setAttribute("src", items2[`item${i}`].imgDist); // set attributes
+		dropItemImg.setAttribute("alt", items2[`item${i}`].name);
+
+		dropItemPercent.textContent = items2[`item${i}`].dropPercent + "%"; // set textcontent
+		dropItemName.textContent = items2[`item${i}`].weapon;
+		dropItemSkin.textContent = items2[`item${i}`].skin;
+		dropItemPrice.textContent = items2[`item${i}`].price + "$";
+
+		dropItemTextBoxLeft.append(dropItemName, dropItemSkin); // append them in correct order
+		dropItemTextBox.append(dropItemTextBoxLeft, dropItemPrice);
+		dropItem.append(dropItemPercent, dropItemImg, dropItemTextBox);
+		dropBox.append(dropItem); // append item to container
+	}
+};
+
+const createItemsInChest = () => {
+	// function to create random items in case
+	const caseItemsBox = document.querySelectorAll(".case__items"); // get every case
+
+	caseItemsBox.forEach((box) => {
+		// for each case, add items to it
+		for (i = 0; i < 100; i++) {
+			const randomNumber = Math.floor(Math.random() * 10000); // get random number
+			let randomItem; // variable to store item number
+
+			// based on random number set random item id
+			if (randomNumber <= 99) {
+				randomItem = 0;
+			} else if (randomNumber <= 299) {
+				randomItem = 1;
+			} else if (randomNumber <= 499) {
+				randomItem = 2;
+			} else if (randomNumber <= 799) {
+				randomItem = 3;
+			} else if (randomNumber <= 1119) {
+				randomItem = 4;
+			} else if (randomNumber <= 1699) {
+				randomItem = 5;
+			} else if (randomNumber <= 3699) {
+				randomItem = 6;
+			} else if (randomNumber <= 6199) {
+				randomItem = 7;
+			} else if (randomNumber <= 8199) {
+				randomItem = 8;
+			} else {
+				randomItem = 9;
+			}
+
+			const item = document.createElement("div"); // item elements
+			const itemImg = document.createElement("img");
+			const itemItemName = document.createElement("p");
+			const itemSkinName = document.createElement("p");
+
+			item.classList.add("case__item", `case__item${box.id}`); // item classes
+			item.classList.add(items2[`item${randomItem}`].color + "-drop");
+			item.style.border = "none";
+			item.id = `item${randomItem}`;
+			itemImg.classList.add("case__img");
+			itemItemName.classList.add("case__item-name");
+			itemSkinName.classList.add("case__skin-name");
+			itemSkinName.classList.add(items2[`item${randomItem}`].color + "-text");
+
+			itemImg.setAttribute("src", items2[`item${randomItem}`].imgDist); // item attributes and text content
+			itemImg.setAttribute("alt", items2[`item${randomItem}`].name);
+			itemItemName.textContent = items2[`item${randomItem}`].weapon;
+			itemSkinName.textContent = items2[`item${randomItem}`].skin;
+
+			item.append(itemImg, itemItemName, itemSkinName); // append item elements in order
+			box.append(item); // append item to case
+		}
+	});
+};
+
+const setBtnText = () => {
+	// function to set button text content
+	if (
+		parseFloat(localStorage.getItem("Balance").slice(0, -1)) >=
+		casePrice * casesAmount
+	) {
+		spinBtn.textContent = `open ${casePrice * casesAmount}.00$`; // if user have enought balance set button to show how much it cost
+	} else {
+		spinBtn.textContent = "add balance"; // if not set it to "add balance"
+	}
+};
+
+const spinCase = () => {
+	// function for spinning case
+	const caseItemsBox = document.querySelectorAll(".case__items"); // get all case boxes
+
+	if (
+		// if balance of player is higher than case cost and case is not spinning then continue
+		parseFloat(localStorage.getItem("Balance").slice(0, -1)) >=
+			casePrice * casesAmount &&
+		spinBtn.textContent !== "spining"
+	) {
+		const caseOpeningSound = new Audio("../dist/audio/open.mp3"); // set open audio
+
+		if (muteBtn.classList.contains("not-muted")) {
+			// if sounds is not muted then play audio
+			caseOpeningSound.play();
+		}
+
+		caseItemsBox.forEach((box) => {
+			// for each case box
+
+			const howStrongSpin = Math.floor(Math.random() * 5000 - 10000); // get random movement between -5000 to -1000 px;
+
+			spinBtn.textContent = "spining"; // set button textContent to spinning
+
+			const casesOpenedToAdd =
+				parseInt(localStorage.getItem("casesOpened")) + 1;
+			localStorage.setItem("casesOpened", casesOpenedToAdd); // amount of cases to added to stats on profile
+
+			const balanceAfterOpening = (
+				parseFloat(localStorage.getItem("Balance").slice(0, -1)) - casePrice
+			).toFixed(2); // get balance after opening case
+
+			localStorage.setItem("Balance", balanceAfterOpening + "$"); // set balance after opening case to localStorage
+			setBalance(); // function from balance.js file (refreshing balance amount in text)
+
+			box.style.left = howStrongSpin + "px"; // set how strong spin is
+			box.style.transition = "left 5s cubic-bezier(0,1,0.5,1)"; // set its animation
+
+			// after animation end, find winning item
+			setTimeout(() => {
+				function getWinningItem() {
+					// get position of middle point
+					const redLineX =
+						box.parentElement.children[0].getBoundingClientRect().x;
+
+					const items = box.querySelectorAll(".case__item"); // get all items of current case box
+					let closestItem = null;
+					let closestDistance = Infinity;
+
+					items.forEach((item) => {
+						const itemCenterX =
+							item.getBoundingClientRect().x + item.offsetWidth / 2;
+						const distance = Math.abs(itemCenterX - redLineX);
+
+						if (distance < closestDistance) {
+							closestDistance = distance;
+							closestItem = item;
+						}
+					});
+
+					return closestItem;
+				}
+
+				// get wiining item and set it in win popup
+				const winningItem = getWinningItem();
+				if (winningItem) {
+					winningItems.push(winningItem); // push items to winning items array
+					winningItemBox.classList.value = "";
+					winningItemBox.classList.add(
+						"win-popup__container",
+						`${items2[`${winningItem.id}`].color + "-win"}`
+					);
+					winningItemImg.setAttribute(
+						"src",
+						items2[`${winningItem.id}`].imgDist
+					);
+					winningItemImg.setAttribute("alt", items2[`${winningItem.id}`].name);
+					winningItemName.textContent = items2[`${winningItem.id}`].name;
+					winningItemPrice.textContent =
+						items2[`${winningItem.id}`].price + "$";
+
+					createDropFromCases(winningItem);
+					hideWinPopup();
+				}
+			}, 5000); // start after end of anim (5s)
+		});
+	} else if (spinBtn.textContent !== "spining") {
+		window.open("../diff/deposit.html", "_self"); // if user dont have enought balance then open deposit site
+	}
+};
+
+const hideWinPopup = () => {
+	if (casesAmount === 1) {
+		// if user only open one case than show win popup
+		winPupup.classList.toggle("hidden");
+	} else {
+		// if not automatically decide to take items, and not sell them
+		setTimeout(() => {
+			takeWinningItem();
+			setBtnText();
+		}, 2000); // do it after 2s after end of anim
+	}
+};
+
+const sellWinningItem = () => {
+	// function to sell items (works only if user open one case at once)
+	const currentBalance = parseFloat(
+		localStorage.getItem("Balance").slice(0, -1)
+	); // get current balance
+	const itemPrice = parseFloat(winningItemPrice.textContent); // get item price
+	const howMuchToAddToBalance = (currentBalance + itemPrice).toFixed(2); // get how much balance player will have after selling item
+	localStorage.setItem("Balance", howMuchToAddToBalance + "$"); // set new balance
+
+	hideWinPopup();
+	refreshBalance();
+	resetBoxAnimation();
+};
+
+const takeWinningItem = () => {
+	// funciton to add won items to inventory of user
+	for (i = 0; i < winningItems.length; i++) {
+		// do this for every won item
+		// if user didnt had this item ever in inventory, then set it to 1
+		// if player had that item then get its localStorage and add 1 to it
+		if (
+			localStorage.getItem("id" + items2[`${winningItems[i].id}`].id) ===
+				null ||
+			localStorage.getItem("id" + items2[`${winningItems[i].id}`].id) === NaN
+		) {
+			localStorage.setItem("id" + items2[`${winningItems[i].id}`].id, 1);
+		} else {
+			localStorage.setItem(
+				"id" + items2[`${winningItems[i].id}`].id,
+				parseInt(
+					localStorage.getItem("id" + items2[`${winningItems[i].id}`].id)
+				) + 1
+			);
+		}
+	}
+
+	if (casesAmount === 1) {
+		hideWinPopup();
+	}
+	resetBoxAnimation();
+};
+
+const refreshBalance = () => {
+	// function to refresh balance
+	balanceAmount.textContent = localStorage.getItem("Balance");
+	balanceAmountMobile.textContent = localStorage.getItem("Balance");
+};
+
+const resetBoxAnimation = () => {
+	// function to reset case box animation
+	const caseItemsBox = document.querySelectorAll(".case__items");
+	caseItemsBox.forEach((box) => {
+		box.innerHTML = "";
+		box.style.transition = "0.01s";
+		box.style.left = "0";
+	});
+
+	winningItems = [];
+	setBtnText();
+	createItemsInChest();
+};
+
+const goBackToMainSite = () => {
+	// function to open main site
+	window.open("../index.html", "_self");
+};
+
+const muteSound = () => {
+	// function to mute case sound
+	muteBtn.classList.toggle("not-muted"); // toggle mute
+
+	if (localStorage.getItem("muted") == 0) {
+		localStorage.setItem("muted", 1);
+	} else {
+		localStorage.setItem("muted", 0);
+	}
+
+	setMuteSound();
+};
+
+const setMuteSound = () => {
+	if (localStorage.getItem("muted") == 0) {
+		// if sound is not mutted, set correct icons
+		muteBtn.lastElementChild.style.display = "none";
+		muteBtn.firstElementChild.style.display = "block";
+		muteBtn.classList.add("not-muted");
+	} else {
+		// if its muted, set correct icons
+		muteBtn.lastElementChild.style.display = "block";
+		muteBtn.firstElementChild.style.display = "none";
+		muteBtn.classList.remove("not-muted");
+	}
+};
+
+const createBoxes = () => {
+	// function to create case boxes
+	for (i = 0; i < casesAmount; i++) {
+		// create boxes based on how many player choosed
+		const caseItem = document.createElement("div");
+		const casePoint = document.createElement("div");
+		const caseTriangle = document.createElement("div");
+		const caseTriangleBtm = document.createElement("div");
+		const caseItems = document.createElement("div");
+
+		if (
+			casesAmount % 2 === 0 ||
+			(casesAmount % 2 !== 0 && i < casesAmount - 1)
+		) {
+			caseItem.style.width = "calc(50% - 32px)";
+		}
+
+		caseItem.classList.add("case__container");
+		caseItem.id = `caseBox${i}`;
+		casePoint.classList.add("case__middle-point");
+		caseTriangle.classList.add("case__middle-triangle");
+		caseTriangleBtm.classList.add(
+			"case__middle-triangle",
+			"case__middle-triangle--bottom"
+		);
+		caseItems.classList.add("case__items");
+		caseItems.classList.add("case__items" + [i]);
+		caseItems.id = i;
+
+		caseItem.append(casePoint, caseTriangle, caseTriangleBtm, caseItems);
+		allCases.append(caseItem);
+	}
+	createItemsInChest();
+};
+
+function setCasesAmount() {
+	// set cases amount to create
+	if (spinBtn.textContent !== "spining") {
+		// if case is not spinning
+		allCases.innerHTML = ""; // clear cases
+
+		switch (this.id) {
+			case "1Case":
+				casesAmount = 1; // set how many cases to create based on id of button
+				break;
+			case "2Case":
+				casesAmount = 2;
+				break;
+			case "3Case":
+				casesAmount = 3;
+				break;
+			case "4Case":
+				casesAmount = 4;
+				break;
+			case "5Case":
+				casesAmount = 5;
+				break;
+		}
+
+		createBoxes();
+		setBtnText();
+	}
+}
+
+const addEventListeners = () => {
+	spinBtn.addEventListener("click", spinCase);
+	spinBtn.addEventListener("click", incrementCases);
+	takeBtn.addEventListener("click", takeWinningItem);
+	sellBtn.addEventListener("click", sellWinningItem);
+	backBtn.addEventListener("click", goBackToMainSite);
+	muteBtn.addEventListener("click", muteSound);
+
+	caseAmountBtns.forEach((btn) => {
+		btn.addEventListener("click", setCasesAmount);
+	});
+};
+
+createItemsInChest();
+setBtnText();
+createInfoAboutItemsInChest();
+addEventListeners();
+setMuteSound();

@@ -1,0 +1,753 @@
+// $secondary-color-value: 207, 160, 255;
+$test: rgb(235, 222, 146);
+$secondary-color-value-r: 235;
+$secondary-color-value-g: 222;
+$secondary-color-value-b: 146;
+// $main2-color: rgb(45, 45, 45);
+$main3-color: rgba(40, 40, 40, 0.6);
+$tiles-color: rgba(60, 60, 60, 0.5);
+$tiles-color-hover: rgba(60, 60, 60, 1);
+// $main-color: rgb(40, 40, 40);
+$nav-color: linear-gradient(
+	90deg,
+	rgba(30, 30, 30, 1) 0%,
+	rgba(40, 40, 40, 1) 25%,
+	rgba(40, 40, 40, 1) 75%,
+	rgba(30, 30, 30, 1) 100%
+);
+$navmenu-color: linear-gradient(
+	180deg,
+	rgba(40, 40, 40, 1) 0%,
+	rgba(40, 40, 40, 1) 25%,
+	rgba(40, 40, 40, 1) 75%,
+	rgba(35, 35, 35, 1) 100%
+);
+$jackpot-player-color: linear-gradient(
+	90deg,
+	rgba(40, 40, 40, 1) 0%,
+	rgba(45, 45, 45, 1) 25%,
+	rgba(45, 45, 45, 1) 75%,
+	rgba(40, 40, 40, 1) 100%
+);
+$jackpot-total-bg: linear-gradient(
+	180deg,
+	rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0
+		)
+		0%,
+	rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0
+		)
+		25%,
+	rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0.1
+		)
+		75%,
+	rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0.2
+		)
+		100%
+);
+$tiles-jackpot: linear-gradient(
+	180deg,
+	rgba(45, 45, 45, 1) 0%,
+	rgba(50, 50, 50) 25%,
+	rgba(55, 55, 55) 75%,
+	rgba(60, 60, 60, 1) 100%
+);
+$main-color: linear-gradient(
+	180deg,
+	rgba(20, 20, 20, 1) 0%,
+	rgba(40, 40, 40, 1) 25%,
+	rgba(40, 40, 40, 1) 75%,
+	rgba(30, 30, 30, 1) 100%
+);
+$main2-color: linear-gradient(
+	180deg,
+	rgba(30, 30, 30, 1) 0%,
+	rgba(40, 40, 40, 1) 25%,
+	rgba(40, 40, 40, 1) 75%,
+	rgba(30, 30, 30, 1) 100%
+);
+$battles-drop-bg: linear-gradient(
+	180deg,
+	rgba(50, 50, 50, 1) 0%,
+	rgba(47, 47, 47, 1) 25%,
+	rgba(44, 44, 44, 1) 75%,
+	rgba(41, 41, 41, 1) 100%
+);
+$dropbox-bg: linear-gradient(
+	90deg,
+	rgba(45, 45, 45, 1) 0%,
+	rgba(40, 40, 40, 1) 25%,
+	rgba(45, 45, 45, 1) 50%,
+	rgba(40, 40, 40, 1) 75%,
+	rgba(45, 45, 45, 1) 100%
+);
+$battles-blank-item: linear-gradient(
+	45deg,
+	rgba(45, 45, 45, 1) 0%,
+	rgba(42, 42, 42, 1) 25%,
+	rgba(42, 42, 42, 1) 75%,
+	rgba(45, 45, 45, 1) 100%
+);
+$user-color: linear-gradient(
+	90deg,
+	rgba(50, 50, 50, 1) 50%,
+	rgba(40, 40, 40, 1) 100%
+);
+$user-color: linear-gradient(
+	90deg,
+	rgba(50, 50, 50, 1) 50%,
+	rgba(40, 40, 40, 1) 100%
+);
+$title-gradient-line-before: linear-gradient(
+	90deg,
+	rgba(255, 255, 255, 0) 0%,
+	rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0.5
+		)
+		10%,
+	rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0.5
+		)
+		30%,
+	rgba(255, 255, 255, 0) 44%,
+	rgba(255, 255, 255, 0) 50%,
+	rgba(255, 255, 255, 0) 56%,
+	rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0.5
+		)
+		70%,
+	rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0.5
+		)
+		90%,
+	rgba(255, 255, 255, 0) 100%
+);
+$last-drop-bg: linear-gradient(
+	90deg,
+	rgba(0, 0, 0, 0.5) 0%,
+	rgba(119, 119, 119, 0) 10%,
+	rgba(119, 119, 119, 0) 90%,
+	rgba(0, 0, 0, 0.5) 100%
+);
+
+$secondary-color: rgb(
+	$secondary-color-value-r,
+	$secondary-color-value-g,
+	$secondary-color-value-b
+);
+$secondary-color-text-hover: rgba(
+	$secondary-color-value-r,
+	$secondary-color-value-g,
+	$secondary-color-value-b,
+	0.7
+);
+$secondary-color-alpha: rgba(
+	$secondary-color-value-r,
+	$secondary-color-value-g,
+	$secondary-color-value-b,
+	0.3
+);
+$secondary-color-alpha-hover: rgba(
+	$secondary-color-value-r,
+	$secondary-color-value-g,
+	$secondary-color-value-b,
+	0.5
+);
+$nav-item-bg: radial-gradient(
+	circle,
+	rgba(169, 93, 245, 0.2) 0%,
+	rgba(255, 255, 255, 0) 100%
+);
+$text-color: rgb(250, 250, 250);
+$text-color-not-active: rgb(175, 175, 175);
+$border-color: rgba(255, 255, 255, 0.15);
+$user-btn-color: linear-gradient(326deg, #be5ea1 0%, #5d8ff5 74%);
+$green: rgb(50, 206, 50);
+$green-low: rgba(50, 206, 50, 0.15);
+$purple: rgb(221, 44, 221);
+$purple-low: rgba(221, 44, 221, 0.15);
+$blue: rgb(56, 56, 231);
+$blue-low: rgba(56, 56, 231, 0.15);
+$red: rgb(231, 49, 49);
+$red-low: rgba(231, 49, 49, 0.15);
+$yellow: rgb(228, 239, 74);
+$yellow-low: rgba(228, 239, 74, 0.15);
+$pink-drop-gradient: linear-gradient(
+	135deg,
+	rgba(211, 44, 230, 0.6) 0%,
+	rgba(211, 44, 230, 0.2) 35%,
+	rgba(211, 44, 230, 0.2) 65%,
+	rgba(211, 44, 230, 0.6) 100%
+);
+$pink-drop: #d32ce6;
+$red-drop-gradient: linear-gradient(
+	135deg,
+	rgba(235, 75, 75, 0.6) 0%,
+	rgba(235, 75, 75, 0.2) 35%,
+	rgba(235, 75, 75, 0.2) 65%,
+	rgba(235, 75, 75, 0.6) 100%
+);
+$red-drop: rgb(235, 75, 75);
+$gold-drop-gradient: linear-gradient(
+	135deg,
+	rgba(233, 239, 54, 0.6) 0%,
+	rgba(233, 239, 54, 0.2) 35%,
+	rgba(233, 239, 54, 0.2) 65%,
+	rgba(233, 239, 54, 0.6) 100%
+);
+$gold-drop: rgb(233, 239, 54);
+$purple-drop-gradient: linear-gradient(
+	135deg,
+	rgba(136, 71, 255, 0.6) 0%,
+	rgba(136, 71, 255, 0.2) 35%,
+	rgba(136, 71, 255, 0.2) 65%,
+	rgba(136, 71, 255, 0.6) 100%
+);
+$purple-drop: rgb(136, 71, 255);
+$blue-drop-gradient: linear-gradient(
+	135deg,
+	rgba(75, 105, 255, 0.6) 0%,
+	rgba(75, 105, 255, 0.2) 35%,
+	rgba(75, 105, 255, 0.2) 65%,
+	rgba(75, 105, 255, 0.6) 100%
+);
+$blue-drop: rgb(75, 105, 255);
+$light-blue-drop-gradient: linear-gradient(
+	135deg,
+	rgba(94, 152, 217, 0.6) 0%,
+	rgba(94, 152, 217, 0.2) 35%,
+	rgba(94, 152, 217, 0.2) 65%,
+	rgba(94, 152, 217, 0.6) 100%
+);
+$light-blue-drop: rgb(94, 152, 217);
+$white-drop-gradient: linear-gradient(
+	135deg,
+	rgba(176, 195, 217, 0.6) 0%,
+	rgba(94, 152, 217, 0.2) 35%,
+	rgba(94, 152, 217, 0.2) 65%,
+	rgba(176, 195, 217, 0.6) 100%
+);
+$white-drop: rgb(176, 195, 217);
+$normal-boxshadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+	rgba(0, 0, 0, 0.23) 0px 3px 6px;
+$purple-boxshadow: rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0.16
+		)
+		0px 3px 6px,
+	rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0.23
+		)
+		0px 3px 6px;
+$purple-last-drop-gradient: linear-gradient(
+	0deg,
+	rgba(136, 71, 255, 0.3) 0%,
+	rgba(136, 71, 255, 0.2) 25%,
+	rgba(136, 71, 255, 0.3) 50%,
+	rgba(136, 71, 255, 0.4) 75%,
+	rgba(136, 71, 255, 0.5) 100%
+);
+$purple-drop-cases-gradient: linear-gradient(
+	0deg,
+	rgba(136, 71, 255, 0.05) 0%,
+	rgba(136, 71, 255, 0.1) 25%,
+	rgba(136, 71, 255, 0.2) 50%,
+	rgba(136, 71, 255, 0.3) 75%,
+	rgba(136, 71, 255, 0.6) 100%
+);
+$pink-last-drop-gradient: linear-gradient(
+	0deg,
+	rgba(211, 44, 230, 0.3) 0%,
+	rgba(211, 44, 230, 0.2) 25%,
+	rgba(211, 44, 230, 0.3) 50%,
+	rgba(211, 44, 230, 0.4) 75%,
+	rgba(211, 44, 230, 0.5) 100%
+);
+$pink-drop-cases-gradient: linear-gradient(
+	0deg,
+	rgba(211, 44, 230, 0.05) 0%,
+	rgba(211, 44, 230, 0.1) 25%,
+	rgba(211, 44, 230, 0.2) 50%,
+	rgba(211, 44, 230, 0.3) 75%,
+	rgba(211, 44, 230, 0.6) 100%
+);
+$gold-last-drop-gradient: linear-gradient(
+	0deg,
+	rgba(233, 239, 54, 0.3) 0%,
+	rgba(233, 239, 54, 0.2) 25%,
+	rgba(233, 239, 54, 0.3) 50%,
+	rgba(233, 239, 54, 0.4) 75%,
+	rgba(233, 239, 54, 0.5) 100%
+);
+$gold-drop-cases-gradient: linear-gradient(
+	0deg,
+	rgba(233, 239, 54, 0.05) 0%,
+	rgba(233, 239, 54, 0.1) 25%,
+	rgba(233, 239, 54, 0.2) 50%,
+	rgba(233, 239, 54, 0.3) 75%,
+	rgba(233, 239, 54, 0.6) 100%
+);
+$red-last-drop-gradient: linear-gradient(
+	0deg,
+	rgba(235, 75, 75, 0.3) 0%,
+	rgba(235, 75, 75, 0.2) 25%,
+	rgba(235, 75, 75, 0.3) 50%,
+	rgba(235, 75, 75, 0.4) 75%,
+	rgba(235, 75, 75, 0.5) 100%
+);
+$red-drop-cases-gradient: linear-gradient(
+	0deg,
+	rgba(235, 75, 75, 0.05) 0%,
+	rgba(235, 75, 75, 0.1) 25%,
+	rgba(235, 75, 75, 0.2) 50%,
+	rgba(235, 75, 75, 0.3) 75%,
+	rgba(235, 75, 75, 0.6) 100%
+);
+$blue-last-drop-gradient: linear-gradient(
+	0deg,
+	rgba(75, 105, 255, 0.3) 0%,
+	rgba(75, 105, 255, 0.2) 25%,
+	rgba(75, 105, 255, 0.3) 50%,
+	rgba(75, 105, 255, 0.4) 75%,
+	rgba(75, 105, 255, 0.5) 100%
+);
+$blue-drop-cases-gradient: linear-gradient(
+	0deg,
+	rgba(75, 105, 255, 0.05) 0%,
+	rgba(75, 105, 255, 0.1) 25%,
+	rgba(75, 105, 255, 0.2) 50%,
+	rgba(75, 105, 255, 0.3) 75%,
+	rgba(75, 105, 255, 0.6) 100%
+);
+$light-blue-last-drop-gradient: linear-gradient(
+	0deg,
+	rgba(94, 152, 217, 0.3) 0%,
+	rgba(94, 152, 217, 0.2) 25%,
+	rgba(94, 152, 217, 0.3) 50%,
+	rgba(94, 152, 217, 0.4) 75%,
+	rgba(94, 152, 217, 0.5) 100%
+);
+$light-blue-drop-cases-gradient: linear-gradient(
+	0deg,
+	rgba(94, 152, 217, 0.05) 0%,
+	rgba(94, 152, 217, 0.1) 25%,
+	rgba(94, 152, 217, 0.2) 50%,
+	rgba(94, 152, 217, 0.3) 75%,
+	rgba(94, 152, 217, 0.6) 100%
+);
+$white-last-drop-gradient: linear-gradient(
+	0deg,
+	rgba(176, 195, 217, 0.3) 0%,
+	rgba(176, 195, 217, 0.2) 25%,
+	rgba(176, 195, 217, 0.3) 50%,
+	rgba(176, 195, 217, 0.4) 75%,
+	rgba(176, 195, 217, 0.5) 100%
+);
+$white-drop-cases-gradient: linear-gradient(
+	0deg,
+	rgba(176, 195, 217, 0.05) 0%,
+	rgba(176, 195, 217, 0.1) 25%,
+	rgba(176, 195, 217, 0.2) 50%,
+	rgba(176, 195, 217, 0.3) 75%,
+	rgba(176, 195, 217, 0.6) 100%
+);
+$pink-drop-cases-drop-gradient: radial-gradient(
+	circle,
+	rgba(211, 44, 230, 0.2) 0%,
+	rgba(211, 44, 230, 0.15) 20%,
+	rgba(211, 44, 230, 0.125) 40%,
+	rgba(211, 44, 230, 0.1) 60%,
+	rgba(211, 44, 230, 0.05) 80%,
+	rgba(211, 44, 230, 0.05) 100%
+);
+$purple-drop-cases-drop-gradient: radial-gradient(
+	circle,
+	rgba(136, 71, 255, 0.2) 0%,
+	rgba(136, 71, 255, 0.15) 20%,
+	rgba(136, 71, 255, 0.125) 40%,
+	rgba(136, 71, 255, 0.1) 60%,
+	rgba(136, 71, 255, 0.05) 80%,
+	rgba(136, 71, 255, 0.05) 100%
+);
+$red-drop-cases-drop-gradient: radial-gradient(
+	circle,
+	rgba(235, 75, 75, 0.2) 0%,
+	rgba(235, 75, 75, 0.15) 20%,
+	rgba(235, 75, 75, 0.125) 40%,
+	rgba(235, 75, 75, 0.1) 60%,
+	rgba(235, 75, 75, 0.05) 80%,
+	rgba(235, 75, 75, 0.05) 100%
+);
+$gold-drop-cases-drop-gradient: radial-gradient(
+	circle,
+	rgba(233, 239, 54, 0.2) 0%,
+	rgba(233, 239, 54, 0.15) 20%,
+	rgba(233, 239, 54, 0.125) 40%,
+	rgba(233, 239, 54, 0.1) 60%,
+	rgba(233, 239, 54, 0.05) 80%,
+	rgba(233, 239, 54, 0.05) 100%
+);
+$blue-drop-cases-drop-gradient: radial-gradient(
+	circle,
+	rgba(75, 105, 255, 0.2) 0%,
+	rgba(75, 105, 255, 0.15) 20%,
+	rgba(75, 105, 255, 0.125) 40%,
+	rgba(75, 105, 255, 0.1) 60%,
+	rgba(75, 105, 255, 0.05) 80%,
+	rgba(75, 105, 255, 0.05) 100%
+);
+$light-blue-drop-cases-drop-gradient: radial-gradient(
+	circle,
+	rgba(94, 152, 217, 0.2) 0%,
+	rgba(94, 152, 217, 0.15) 20%,
+	rgba(94, 152, 217, 0.125) 40%,
+	rgba(94, 152, 217, 0.1) 60%,
+	rgba(94, 152, 217, 0.05) 80%,
+	rgba(94, 152, 217, 0.05) 100%
+);
+$white-drop-cases-drop-gradient: radial-gradient(
+	circle,
+	rgba(176, 195, 217, 0.2) 0%,
+	rgba(176, 195, 217, 0.15) 20%,
+	rgba(176, 195, 217, 0.125) 40%,
+	rgba(176, 195, 217, 0.1) 60%,
+	rgba(176, 195, 217, 0.05) 80%,
+	rgba(176, 195, 217, 0.05) 100%
+);
+$purple-drop-win-gradient: linear-gradient(
+	0deg,
+	rgba(136, 71, 255, 0.05) 0%,
+	rgba(136, 71, 255, 0.1) 25%,
+	rgba(136, 71, 255, 0.15) 50%,
+	rgba(136, 71, 255, 0.2) 75%,
+	rgba(136, 71, 255, 0.25) 100%
+);
+$pink-drop-win-gradient: linear-gradient(
+	0deg,
+	rgba(211, 44, 230, 0.05) 0%,
+	rgba(211, 44, 230, 0.1) 25%,
+	rgba(211, 44, 230, 0.15) 50%,
+	rgba(211, 44, 230, 0.2) 75%,
+	rgba(211, 44, 230, 0.25) 100%
+);
+$red-drop-win-gradient: linear-gradient(
+	0deg,
+	rgba(235, 75, 75, 0.05) 0%,
+	rgba(235, 75, 75, 0.1) 25%,
+	rgba(235, 75, 75, 0.15) 50%,
+	rgba(235, 75, 75, 0.2) 75%,
+	rgba(235, 75, 75, 0.25) 100%
+);
+$gold-drop-win-gradient: linear-gradient(
+	0deg,
+	rgba(233, 239, 54, 0.05) 0%,
+	rgba(233, 239, 54, 0.1) 25%,
+	rgba(233, 239, 54, 0.15) 50%,
+	rgba(233, 239, 54, 0.2) 75%,
+	rgba(233, 239, 54, 0.25) 100%
+);
+$blue-drop-win-gradient: linear-gradient(
+	0deg,
+	rgba(75, 105, 255, 0.05) 0%,
+	rgba(75, 105, 255, 0.1) 25%,
+	rgba(75, 105, 255, 0.15) 50%,
+	rgba(75, 105, 255, 0.2) 75%,
+	rgba(75, 105, 255, 0.25) 100%
+);
+$light-blue-drop-win-gradient: linear-gradient(
+	0deg,
+	rgba(94, 152, 217, 0.05) 0%,
+	rgba(94, 152, 217, 0.1) 25%,
+	rgba(94, 152, 217, 0.15) 50%,
+	rgba(94, 152, 217, 0.2) 75%,
+	rgba(94, 152, 217, 0.25) 100%
+);
+$white-drop-win-gradient: linear-gradient(
+	0deg,
+	rgba(176, 195, 217, 0.05) 0%,
+	rgba(176, 195, 217, 0.1) 25%,
+	rgba(176, 195, 217, 0.15) 50%,
+	rgba(176, 195, 217, 0.2) 75%,
+	rgba(176, 195, 217, 0.25) 100%
+);
+$purple-upgrader-gradient: linear-gradient(
+	-90deg,
+	rgba(136, 71, 255, 0.05) 0%,
+	rgba(136, 71, 255, 0.075) 25%,
+	rgba(136, 71, 255, 0.1) 50%,
+	rgba(136, 71, 255, 0.15) 75%,
+	rgba(136, 71, 255, 0.2) 100%
+);
+$pink-upgrader-gradient: linear-gradient(
+	-90deg,
+	rgba(211, 44, 230, 0.05) 0%,
+	rgba(211, 44, 230, 0.075) 25%,
+	rgba(211, 44, 230, 0.1) 50%,
+	rgba(211, 44, 230, 0.15) 75%,
+	rgba(211, 44, 230, 0.2) 100%
+);
+$red-upgrader-gradient: linear-gradient(
+	-90deg,
+	rgba(235, 75, 75, 0.05) 0%,
+	rgba(235, 75, 75, 0.075) 25%,
+	rgba(235, 75, 75, 0.1) 50%,
+	rgba(235, 75, 75, 0.15) 75%,
+	rgba(235, 75, 75, 0.2) 100%
+);
+$gold-upgrader-gradient: linear-gradient(
+	-90deg,
+	rgba(233, 239, 54, 0.05) 0%,
+	rgba(233, 239, 54, 0.075) 25%,
+	rgba(233, 239, 54, 0.1) 50%,
+	rgba(233, 239, 54, 0.15) 75%,
+	rgba(233, 239, 54, 0.2) 100%
+);
+$blue-upgrader-gradient: linear-gradient(
+	-90deg,
+	rgba(75, 105, 255, 0.05) 0%,
+	rgba(75, 105, 255, 0.075) 25%,
+	rgba(75, 105, 255, 0.1) 50%,
+	rgba(75, 105, 255, 0.15) 75%,
+	rgba(75, 105, 255, 0.2) 100%
+);
+$light-blue-upgrader-gradient: linear-gradient(
+	-90deg,
+	rgba(94, 152, 217, 0.05) 0%,
+	rgba(94, 152, 217, 0.075) 25%,
+	rgba(94, 152, 217, 0.1) 50%,
+	rgba(94, 152, 217, 0.15) 75%,
+	rgba(94, 152, 217, 0.2) 100%
+);
+$white-upgrader-gradient: linear-gradient(
+	-90deg,
+	rgba(176, 195, 217, 0.05) 0%,
+	rgba(176, 195, 217, 0.075) 25%,
+	rgba(176, 195, 217, 0.1) 50%,
+	rgba(176, 195, 217, 0.15) 75%,
+	rgba(176, 195, 217, 0.2) 100%
+);
+$red-upgrader: linear-gradient(
+	180deg,
+	rgba(235, 75, 75, 0) 0%,
+	rgba(235, 75, 75, 0.5) 50%,
+	rgba(235, 75, 75, 1) 100%
+);
+$green-upgrader: linear-gradient(
+	180deg,
+	rgba(235, 75, 75, 0) 0%,
+	rgba(113, 214, 77, 0.5) 50%,
+	rgb(113, 214, 77) 100%
+);
+$avatar-bg: linear-gradient(
+	180deg,
+	rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0.5
+		)
+		0%,
+	rgba(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b,
+			0.7
+		)
+		50%,
+	rgb(
+			$secondary-color-value-r,
+			$secondary-color-value-g,
+			$secondary-color-value-b
+		)
+		100%
+);
+$green-roulette: linear-gradient(
+	0deg,
+	rgba(78, 163, 77, 1) 0%,
+	rgba(78, 163, 77, 0.9) 25%,
+	rgba(78, 163, 77, 0.8) 50%,
+	rgba(78, 163, 77, 0.7) 75%,
+	rgba(78, 163, 77, 0.6) 100%
+);
+$red-roulette: linear-gradient(
+	0deg,
+	rgba(208, 66, 66, 1) 0%,
+	rgba(208, 66, 66, 0.9) 25%,
+	rgba(208, 66, 66, 0.8) 50%,
+	rgba(208, 66, 66, 0.7) 75%,
+	rgba(208, 66, 66, 0.6) 100%
+);
+$black-roulette: linear-gradient(
+	0deg,
+	rgba(67, 72, 81, 1) 0%,
+	rgba(67, 72, 81, 0.9) 25%,
+	rgba(67, 72, 81, 0.8) 50%,
+	rgba(67, 72, 81, 0.7) 75%,
+	rgba(67, 72, 81, 0.6) 100%
+);
+$jackpot-red: linear-gradient(
+	135deg,
+	rgb(91, 29, 29) 25%,
+	rgb(208, 66, 66) 25%,
+	rgb(208, 66, 66) 50%,
+	rgb(91, 29, 29) 50%,
+	rgb(91, 29, 29) 75%,
+	rgb(208, 66, 66) 75%,
+	rgb(208, 66, 66)
+);
+$jackpot-blue: linear-gradient(
+	135deg,
+	rgb(44, 64, 136) 25%,
+	rgb(78, 111, 230) 25%,
+	rgb(78, 111, 230) 50%,
+	rgb(44, 64, 136) 50%,
+	rgb(44, 64, 136) 75%,
+	rgb(78, 111, 230) 75%,
+	rgb(78, 111, 230)
+);
+// $jackpot-blue: linear-gradient(
+// 	0deg,
+// 	rgb(78, 111, 230) 0%,
+// 	rgba(78, 111, 230, 0.9) 25%,
+// 	rgba(78, 111, 230, 0.8) 50%,
+// 	rgba(78, 111, 230, 0.7) 75%,
+// 	rgba(78, 111, 230, 0.6) 100%
+// );
+// $jackpot-green: linear-gradient(
+// 	0deg,
+// 	rgba(78, 163, 77, 1) 0%,
+// 	rgba(78, 163, 77, 0.9) 25%,
+// 	rgba(78, 163, 77, 0.8) 50%,
+// 	rgba(78, 163, 77, 0.7) 75%,
+// 	rgba(78, 163, 77, 0.6) 100%
+// );
+$jackpot-green: linear-gradient(
+	135deg,
+	rgb(39, 81, 38) 25%,
+	rgb(78, 163, 77) 25%,
+	rgb(78, 163, 77) 50%,
+	rgb(39, 81, 38) 50%,
+	rgb(39, 81, 38) 75%,
+	rgb(78, 163, 77) 75%,
+	rgb(78, 163, 77)
+);
+$jackpot-yellow: linear-gradient(
+	135deg,
+	rgb(91, 91, 29) 25%,
+	rgb(208, 208, 66) 25%,
+	rgb(208, 208, 66) 50%,
+	rgb(91, 91, 29) 50%,
+	rgb(91, 91, 29) 75%,
+	rgb(208, 208, 66) 75%,
+	rgb(208, 208, 66)
+);
+// $jackpot-yellow: linear-gradient(
+// 	0deg,
+// 	rgb(208, 208, 66) 0%,
+// 	rgba(208, 208, 66, 0.9) 25%,
+// 	rgba(208, 208, 66, 0.8) 50%,
+// 	rgba(208, 208, 66, 0.7) 75%,
+// 	rgba(208, 208, 66, 0.6) 100%
+// );
+$purple-crash-box: linear-gradient(
+	-45deg,
+	rgba(136, 71, 255, 0.1) 0%,
+	rgba(136, 71, 255, 0.075) 20%,
+	rgba(136, 71, 255, 0.05) 40%,
+	rgba(136, 71, 255, 0.05) 50%,
+	rgba(136, 71, 255, 0.05) 60%,
+	rgba(136, 71, 255, 0.075) 80%,
+	rgba(136, 71, 255, 0.2) 100%
+);
+$pink-crash-box: linear-gradient(
+	-45deg,
+	rgba(211, 44, 230, 0.1) 0%,
+	rgba(211, 44, 230, 0.075) 20%,
+	rgba(211, 44, 230, 0.05) 40%,
+	rgba(211, 44, 230, 0.05) 50%,
+	rgba(211, 44, 230, 0.05) 60%,
+	rgba(211, 44, 230, 0.075) 80%,
+	rgba(211, 44, 230, 0.2) 100%
+);
+$gold-crash-box: linear-gradient(
+	-45deg,
+	rgba(233, 239, 54, 0.1) 0%,
+	rgba(233, 239, 54, 0.075) 20%,
+	rgba(233, 239, 54, 0.05) 40%,
+	rgba(233, 239, 54, 0.05) 50%,
+	rgba(233, 239, 54, 0.05) 60%,
+	rgba(233, 239, 54, 0.075) 80%,
+	rgba(233, 239, 54, 0.2) 100%
+);
+$red-crash-box: linear-gradient(
+	-45deg,
+	rgba(235, 75, 75, 0.1) 0%,
+	rgba(235, 75, 75, 0.075) 20%,
+	rgba(235, 75, 75, 0.05) 40%,
+	rgba(235, 75, 75, 0.05) 50%,
+	rgba(235, 75, 75, 0.05) 60%,
+	rgba(235, 75, 75, 0.075) 80%,
+	rgba(235, 75, 75, 0.2) 100%
+);
+$blue-crash-box: linear-gradient(
+	-45deg,
+	rgba(75, 105, 255, 0.1) 0%,
+	rgba(75, 105, 255, 0.075) 20%,
+	rgba(75, 105, 255, 0.05) 40%,
+	rgba(75, 105, 255, 0.05) 50%,
+	rgba(75, 105, 255, 0.05) 60%,
+	rgba(75, 105, 255, 0.075) 80%,
+	rgba(75, 105, 255, 0.2) 100%
+);
+$light-blue-crash-box: linear-gradient(
+	-45deg,
+	rgba(94, 152, 217, 0.1) 0%,
+	rgba(94, 152, 217, 0.075) 20%,
+	rgba(94, 152, 217, 0.05) 40%,
+	rgba(94, 152, 217, 0.05) 50%,
+	rgba(94, 152, 217, 0.05) 60%,
+	rgba(94, 152, 217, 0.075) 80%,
+	rgba(94, 152, 217, 0.2) 100%
+);
+$white-crash-box: linear-gradient(
+	-45deg,
+	rgba(176, 195, 217, 0.1) 0%,
+	rgba(176, 195, 217, 0.075) 20%,
+	rgba(176, 195, 217, 0.05) 40%,
+	rgba(176, 195, 217, 0.05) 50%,
+	rgba(176, 195, 217, 0.05) 60%,
+	rgba(176, 195, 217, 0.075) 80%,
+	rgba(176, 195, 217, 0.2) 100%
+);

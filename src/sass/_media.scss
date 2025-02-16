@@ -1,0 +1,315 @@
+@media (min-width: 576px) {
+	.stats {
+		&__item {
+			display: flex;
+			align-items: center;
+			padding: 1em 0;
+			width: 40%;
+		}
+
+		&__icon {
+			margin: 0 1em;
+			padding: 0.75em;
+		}
+	}
+
+	.login-popup {
+		&__container {
+			width: auto;
+			padding: 10em;
+		}
+	}
+
+	.deposit__top {
+		display: flex;
+		justify-content: center;
+
+		&-left,
+		&-right {
+			padding: 0 0.7em;
+			width: 100%;
+		}
+	}
+
+	.battles {
+		&__popup {
+			&-container {
+				min-height: 300px;
+				max-height: 800px;
+				border-radius: 5px;
+			}
+		}
+	}
+
+	.user-mobile {
+		&__btn {
+			width: 25%;
+		}
+	}
+
+	.mines {
+		&__field {
+			width: calc((100px + 6.5px) * 5);
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav-mobile {
+		&__list {
+			font-size: 2.6rem;
+		}
+	}
+
+	// .drop {
+	// 	&__item {
+	// 		// width: 175px;
+	// 		// height: 125px;
+	// 	}
+	// }
+
+	.cases {
+		&__item {
+			&-container {
+				width: 250px;
+				// height: 250px;
+			}
+		}
+	}
+
+	.deposit {
+		&__btn {
+			width: calc(14%);
+		}
+
+		&__container {
+			padding: 2em;
+		}
+
+		&__submit-btn {
+			width: 25%;
+		}
+	}
+
+	.upgrader {
+		&__top {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: stretch;
+			padding: 0 1em;
+
+			&-middle {
+				height: auto;
+				width: 25%;
+				margin: 0;
+			}
+
+			&-left,
+			&-right {
+				width: 30%;
+				margin: 0;
+			}
+		}
+
+		&__bottom {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-left,
+			&-right {
+				width: 48%;
+			}
+
+			&-right-mid {
+				// flex-direction: row;
+			}
+		}
+	}
+
+	.profile {
+		&__avatar {
+			width: 125px;
+			height: 125px;
+		}
+
+		&__name {
+			font-size: 2.4rem;
+		}
+
+		&__balance {
+			font-size: 1.8rem;
+		}
+
+		&__inputs-box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__input-box {
+			padding: 0 1em;
+			width: auto;
+		}
+
+		&__items {
+			&-buttons {
+				padding: 1em;
+				flex-direction: row;
+				align-items: center;
+			}
+
+			&-title {
+				padding: 0;
+			}
+
+			&-price {
+				padding: 0;
+				padding-right: 0.5em;
+			}
+
+			&-right {
+				flex-direction: row;
+				align-items: center;
+			}
+
+			&-price {
+				display: block;
+			}
+		}
+	}
+
+	.jackpot {
+		&__options {
+			flex-direction: row;
+
+			&-btn {
+				margin: 0 3em;
+			}
+		}
+
+		&__playeritems {
+			&-buttons {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			&-value,
+			&-right {
+				padding: 1em 0;
+			}
+
+			&-value--left {
+				justify-content: flex-start;
+			}
+
+			&-right {
+				justify-content: flex-end;
+			}
+		}
+
+		&__top {
+			&-box {
+				&::before {
+					transform: translate(-50%, -50%) skew(-25deg);
+				}
+			}
+		}
+	}
+
+	.crash {
+		&__box {
+			width: 400px;
+			height: 400px;
+
+			&-bg {
+				width: 450px;
+				height: 450px;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.gamemode {
+		&__btn {
+			display: block;
+		}
+	}
+
+	.roulette {
+		&__bets {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+		&__bet {
+			width: 25%;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.nav {
+		&__list {
+			display: flex;
+		}
+
+		&__hamb {
+			display: none;
+		}
+	}
+
+	.battles {
+		&__battle {
+			&-containerofall {
+				flex-direction: row;
+				align-items: stretch;
+			}
+		}
+	}
+
+	.user {
+		display: flex;
+	}
+
+	.stats {
+		&__item {
+			width: 20%;
+		}
+	}
+
+	.login-popup {
+		&__title {
+			font-size: 3rem;
+		}
+
+		&__btn {
+			font-size: 2rem;
+		}
+	}
+
+	.spin {
+		font-size: 1.8rem;
+	}
+
+	.profile {
+		&__stats {
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 60%;
+		}
+	}
+
+	.battles {
+		&__container {
+			flex-direction: row;
+			align-items: start;
+		}
+
+		&__options {
+			width: auto;
+			margin-bottom: 0;
+			order: 0;
+		}
+	}
+}
